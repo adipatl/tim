@@ -44,6 +44,7 @@ input {
   width: 40%;
   background: rgb(102, 102, 102);
   color: rgb(255, 128, 0);
+  font-weight: bold;
 }
 
 .orange {
