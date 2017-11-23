@@ -45,6 +45,13 @@ input {
   background: rgb(102, 102, 102);
   color: rgb(255, 128, 0);
   font-weight: bold;
+  cursor: pointer;
+}
+
+#button:disabled {
+  background: rgb(73, 73, 73);
+  color: lightgray;
+  cursor: no-drop;
 }
 
 .orange {

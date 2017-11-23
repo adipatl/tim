@@ -9,6 +9,15 @@ function redirect() {
   window.location.href = redirectUrl + employeeId;
 }
 
+function checkId() {
+  const employeeId = document.getElementById("employeeId").value;
+  if (employeeId.length === 7) {
+    document.getElementById("button").disabled = false;
+  } else {
+    document.getElementById("button").disabled = true;
+  }
+}
+
 function checkCookie() {
   const employeeId = readCookie("employeeId");
   if (employeeId) {

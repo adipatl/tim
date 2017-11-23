@@ -16,8 +16,8 @@
     <img alt="TIM Logo" src="images/tim.svg" class="tim" />
     <p class="orange">Please enter your employee ID</p>
     <form onsubmit="redirect(); return false;">
-      <input type="text" id="employeeId">
-      <input type="submit" id="button">
+      <input type="text" id="employeeId" onkeyup="checkId()">
+      <input type="submit" id="button" disabled>
     </form>
     <img alt="loading" src="images/swirl.png" id="swirl" />
   </div>
