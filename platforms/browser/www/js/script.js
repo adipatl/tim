@@ -3,24 +3,29 @@ var app = {
     initialize: function() {
         this.bindEvents();
     },
+
+    isPhoneGap: function() {
+        return document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        if (this.isPhoneGap()) {
+            console.log('Loaded under Phonegap');
+            document.addEventListener('deviceready', this.onDeviceReady, false);
+        }
+        else {
+            console.log('Loaded under Web Browser');
+            this.onDeviceReady();
+        }
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-
         checkCookie();
     }
 };
@@ -55,15 +60,34 @@ function redirectTo(email, employeeId) {
 }
 
 function pickContact() {
+
+    function fillEmail(email) {
+        document.getElementById("email").value = email;
+    }
     navigator.contacts.pickContact(function(contact){
         if (contact.emails.length === 1) {
-            document.getElementById("email").value = contact.emails[0].value;
+            fillEmail(contact.emails[0].value);
         }
-        else if (contact.emails.length > 1)
-            //navi
-            document.getElementById("email").value = JSON.stringify(contact.emails);
-        else
-            document.getElementById("email").value = "noemail";
+        else if (contact.emails.length > 1) {
+            var emailList = [];
+            for (var i = 0; i < contact.emails.length; ++i) {
+                emailList.push(contact.emails[i].value);
+            }
+
+            function onSelectedEmail(buttonIndex) {
+                fillEmail(emailList[buttonIndex].value);
+            }
+
+            navigator.notification.confirm(
+                'Please select email for this customer!', // message
+                onSelectedEmail,            // callback to invoke with index of button pressed
+                'Select email',           // title
+                emailList     // buttonLabels
+            );
+        }
+        else {
+            navigator.notification.alert('This contact has no email', null);
+        }
 
         checkValid();
     },function(err){
