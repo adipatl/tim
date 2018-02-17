@@ -1,0 +1,86 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: verdana, geneva, sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  max-height: 80px;
+  max-width: 200px;
+  margin: 5px;
+}
+
+.tim {
+  max-height: 150px;
+  max-width: 150px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+input {
+  border-radius: 18px;
+  height: 40px;
+  width: 80%;
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+  font-size: 16px;
+}
+
+#button {
+  width: 40%;
+  background: rgb(102, 102, 102);
+  color: rgb(255, 128, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#button:disabled {
+  background: rgb(73, 73, 73);
+  color: lightgray;
+  cursor: no-drop;
+}
+
+.orange {
+  color: rgb(255, 128, 0);
+}
+
+#swirl {
+  display: none;
+  margin-top: 0.5em;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
