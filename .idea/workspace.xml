@@ -2,178 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66bee867-27f5-4653-bf0d-e0a60abfbafe" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change beforePath="$PROJECT_DIR$/node_modules/file/lib/file.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/node_modules/file/tests/file_spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-40.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-40.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-40@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-50.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-50.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-50@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-60.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-60.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-60@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-60@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-72.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-72.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-72@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-76.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-76.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-76@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-small.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-small@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon-small@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/icon/ios/icon@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-land-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/android/drawable-port-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-568h@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-667h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-Landscape-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-Landscape@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-Landscape~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-Portrait@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default-Portrait~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/assets/www/res/screen/ios/Default~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-hdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-ldpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-mdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-xhdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-xxhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-xxhdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-xxxhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-xxxhdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-hdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-ldpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-mdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-xhdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-xxhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-xxhdpi/screen.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-xxxhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-xxxhdpi/screen.png" />
       <change beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/browser.json" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/browser/www/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/manifest.json" afterPath="$PROJECT_DIR$/platforms/browser/www/manifest.json" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-40.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-40@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-50.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-50@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-60.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-60@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-60@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-72@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-76.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-76@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-small.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-small@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon-small@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/ios/icon@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-land-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/android/drawable-port-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-568h@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-667h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-Landscape-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-Landscape@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-Landscape~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-Portrait@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default-Portrait~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/res/screen/ios/Default~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon29x29@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon29x29@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon29x29@3x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon29x29@3x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon40x40@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/AppIcon40x40@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-20@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-20@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-20@3x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-20@3x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-40.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-40.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-40@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-40@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-50.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-50.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-50@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-50@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-60@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-60@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-60@3x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-60@3x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-72.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-72.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-72@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-72@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-76.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-76.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-76@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-76@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small@3x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon-small@3x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon@2x.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/AppIcon.appiconset/icon@2x.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-568h@2x~iphone.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-568h@2x~iphone.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-667h.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-667h.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-736h.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-736h.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape-736h.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape-736h.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape@2x~ipad.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape@2x~ipad.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape~ipad.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Landscape~ipad.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Portrait@2x~ipad.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Portrait@2x~ipad.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Portrait~ipad.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default-Portrait~ipad.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default@2x~iphone.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default@2x~iphone.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default~iphone.png" afterPath="$PROJECT_DIR$/platforms/ios/TIM/Images.xcassets/LaunchImage.launchimage/Default~iphone.png" />
       <change beforePath="$PROJECT_DIR$/platforms/ios/TIM/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/TIM/config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/ios/www/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-40.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-40@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-50.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-50@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-60.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-60@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-60@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-72@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-76.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-76@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-small.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-small@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-small@3x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-land-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-hdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-ldpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-mdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-xhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-xxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/android/drawable-port-xxxhdpi-screen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-568h@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-667h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-Landscape-736h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-Landscape@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-Landscape~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-Portrait@2x~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default-Portrait~ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default@2x~iphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/ios/www/res/screen/ios/Default~iphone.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -190,11 +28,21 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="296">
+              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="android.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/android.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,33 +57,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1631">
-              <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
+            <state relative-caret-position="153">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="571" column="25" lean-forward="false" selection-start-line="571" selection-start-column="25" selection-end-line="571" selection-end-column="25" />
-              <folding>
-                <marker date="1518881841572" expanded="true" signature="22467:22476" ph="{&quot;version&quot;: &quot;0.2.2&quot;...}" />
-              </folding>
+            <state relative-caret-position="33">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/cordova-browser/node_modules/cordova-registry-mapper/index.js">
+      <file leaf-file-name="drawable-hdpi-icon.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/res/icon/android/drawable-hdpi-icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drawable-ldpi-icon.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/res/icon/android/drawable-ldpi-icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platforms.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platforms/platforms.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -253,27 +113,6 @@
       </file>
       <file leaf-file-name="drawable-hdpi-icon.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/res/icon/android/drawable-hdpi-icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawable-xxhdpi-icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/res/icon/android/drawable-xxhdpi-icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawable-xxxhdpi-icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/res/icon/android/drawable-xxxhdpi-icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawable-xhdpi-icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/res/icon/android/drawable-xhdpi-icon.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -297,6 +136,8 @@
       <find>phonegap</find>
       <find>input</find>
       <find>submit</find>
+      <find>index</find>
+      <find>www</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -309,6 +150,7 @@
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -358,14 +200,7 @@
               <item name="tim" type="b2602c69:ProjectViewProjectNode" />
               <item name="tim" type="462c0819:PsiDirectoryNode" />
               <item name="platforms" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="platforms" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tim" type="b2602c69:ProjectViewProjectNode" />
@@ -376,52 +211,6 @@
               <item name="tim" type="b2602c69:ProjectViewProjectNode" />
               <item name="tim" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tim" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="screen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,18 +267,17 @@
       <updated>1518674347919</updated>
       <workItem from="1518674349042" duration="513000" />
       <workItem from="1518860737603" duration="567000" />
-      <workItem from="1518863372100" duration="11536000" />
+      <workItem from="1518863372100" duration="12026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12616000" />
+    <option name="totallyTimeSpent" value="13106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="23" width="1655" height="999" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24048339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24048339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -748,10 +536,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/android.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="296">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -760,8 +556,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1631">
-          <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/res/icon/android/drawable-hdpi-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/res/icon/android/drawable-ldpi-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/platforms.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

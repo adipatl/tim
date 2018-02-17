@@ -16,7 +16,7 @@
     <author email="adipat.larprattanakul@thomsonreuters.com" href="https://www.thomsonreuters.com">
         Adipat Larprattanakul
     </author>
-    <content src="index.html" />
+    <content src="www/index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -46,5 +46,5 @@
     <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <preference name="phonegap-version" value="cli-7.1.1" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
 </widget>

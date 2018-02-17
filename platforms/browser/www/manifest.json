@@ -7,6 +7,5 @@
   "description": "Trust In Mobile Application",
   "author": "Adipat Larprattanakul",
   "icons": [],
-  "start_url": "index.html",
-  "theme_color": "#ffffff"
+  "start_url": "www/index.html"
 }
