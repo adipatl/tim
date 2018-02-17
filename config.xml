@@ -20,15 +20,15 @@
         <splash density="land-ldpi" src="www/res/screen/android/Icon-512.png" />
         <splash density="land-mdpi" src="www/res/screen/android/Icon-512.png" />
         <splash density="land-hdpi" src="www/res/screen/android/Icon-512.png" />
-        <splash density="land-xhdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="land-xxhdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="land-xxxhdpi"src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-ldpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-mdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-hdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-xhdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-xxhdpi" src="www/res/screen/android/Icon-512.png"/>
-        <splash density="port-xxxhdpi" src="www/res/screen/android/Icon-512.png"/>
+        <splash density="land-xhdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="land-xxhdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="land-xxxhdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-ldpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-mdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-hdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-xhdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-xxhdpi" src="www/res/screen/android/Icon-512.png" />
+        <splash density="port-xxxhdpi" src="www/res/screen/android/Icon-512.png" />
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/Icon-57.png" width="57" />
@@ -94,11 +94,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="phonegap-version" value="cli-7.1.1" />
     <engine name="browser" spec="~5.0.3" />
+    <engine name="android" spec="~6.3.0" />
+    <engine name="ios" spec="^4.5.4" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.7.2" />
     <plugin name="cordova-plugin-contacts" spec="~3.0.1" />
     <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
-    <engine name="android" spec="~6.3.0" />
-    <engine name="ios" spec="~4.5.4" />
-    <preference name="phonegap-version" value="cli-7.1.0" />
 </widget>

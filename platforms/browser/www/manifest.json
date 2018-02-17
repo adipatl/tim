@@ -1,24 +1,12 @@
 {
+  "background_color": "#FFF",
+  "display": "standalone",
   "name": "TIM",
   "short_name": "TIM",
-  "description": "Description of your app from template",
+  "version": "com.tim.app",
+  "description": "Trust In Mobile Application",
+  "author": "Adipat Larprattanakul",
+  "icons": [],
   "start_url": "index.html",
-  "scope": "index.html",
-  "icons": [
-    {
-      "src": "img/logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "img/splash.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "default_locale": "en",
-  "display": "standalone",
-  "background_color": "#FFF",
-  "theme_color": "#000",
-  "orientation": "landscape"
+  "theme_color": "#ffffff"
 }

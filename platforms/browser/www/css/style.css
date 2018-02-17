@@ -31,7 +31,7 @@ form {
   align-items: center;
 }
 
-input {
+input, button {
   border-radius: 18px;
   height: 40px;
   width: 80%;
@@ -40,7 +40,7 @@ input {
   font-size: 16px;
 }
 
-#button {
+#button, #contact {
   width: 40%;
   background: rgb(102, 102, 102);
   color: rgb(255, 128, 0);

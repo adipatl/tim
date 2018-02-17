@@ -31,7 +31,7 @@
     <p class="orange">Please enter customer's email & your employee ID</p>
     <form onsubmit="redirect(); return false;">
       <input type="text" id="email" onkeyup="checkValid()">
-      <button type="button" onclick="pickContact();">Pick email from contacts...</button>
+      <button type="button" id="contact" onclick="pickContact();">Pick email from contacts...</button>
       <input style="margin-top: 30px" type="text" id="employeeId" onkeyup="checkValid()">
       <input type="submit" id="button" disabled>
     </form>
