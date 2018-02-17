@@ -35,8 +35,14 @@ const redirectUrl =
 
 function redirect() {
 
-  const employeeId = document.getElementById("employeeId").value;
-  const email = document.getElementById("email").value;
+  var employeeId = document.getElementById("employeeId").value;
+  if (employeeId === "Employee ID")
+      employeeId = '';
+
+  var email = document.getElementById("email").value;
+  if (email === "email")
+      email = null;
+
   writeToCache("employeeId", employeeId);
   redirectTo(email, employeeId);
 }
@@ -93,8 +99,10 @@ function pickContact() {
 
 function checkCache() {
   var employeeId = readFromCache("employeeId");
-  if (employeeId === null || employeeId === undefined || employeeId.length <= 0)
+  if (employeeId === null || employeeId === undefined || employeeId.length <= 0 || employeeId === "null") {
+
       return;
+  }
 
   document.getElementById("employeeId").value = employeeId;
 }
