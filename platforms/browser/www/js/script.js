@@ -63,9 +63,13 @@ function pickContact() {
 
     function fillEmail(email) {
         document.getElementById("email").value = email;
+        checkValid();
     }
     navigator.contacts.pickContact(function(contact){
-        if (contact.emails.length === 1) {
+        if (contact.emails === null || contact.emails === undefined) {
+            navigator.notification.alert('This contact has no email', fillEmail(""));
+        }
+        else if (contact.emails.length === 1) {
             fillEmail(contact.emails[0].value);
         }
         else if (contact.emails.length > 1) {
@@ -75,7 +79,10 @@ function pickContact() {
             }
 
             function onSelectedEmail(buttonIndex) {
-                fillEmail(emailList[buttonIndex].value);
+                if (buttonIndex === undefined || buttonIndex <= 0)
+                    fillEmail(-1);
+                else
+                    fillEmail(emailList[buttonIndex-1]);
             }
 
             navigator.notification.confirm(
@@ -84,9 +91,6 @@ function pickContact() {
                 'Select email',           // title
                 emailList     // buttonLabels
             );
-        }
-        else {
-            navigator.notification.alert('This contact has no email', null);
         }
 
         checkValid();
