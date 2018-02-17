@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "TIM",
+  "short_name": "TIM",
+  "version": "com.tim.app",
+  "description": "Trust In Mobile Application",
+  "author": "Adipat Larprattanakul",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#ffffff"
+}

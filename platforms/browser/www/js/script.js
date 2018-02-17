@@ -34,10 +34,6 @@ function redirect() {
   const email = document.getElementById("email").value;
   createCookie("employeeId", employeeId, 30);
   var redirect = redirectTo(email, employeeId);
-  if (redirect) {
-      document.getElementById("button").style.display = "none";
-      document.getElementById("swirl").style.display = "block";
-  }
 }
 
 function redirectTo(email, employeeId) {
