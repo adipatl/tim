@@ -38,7 +38,7 @@ function redirect() {
   const employeeId = document.getElementById("employeeId").value;
   const email = document.getElementById("email").value;
   writeToCache("employeeId", employeeId);
-  var redirect = redirectTo(email, employeeId);
+  redirectTo(email, employeeId);
 }
 
 function redirectTo(email, employeeId) {
@@ -51,19 +51,13 @@ function redirectTo(email, employeeId) {
     url += "&q2=" + employeeId;
   }
 
-  if (url.length > redirectUrl.length) {
-      //window.location.href = url;
-      window.open(url, '_system');
-      return true;
-  }
-  return false;
+  window.open(url, '_system');
 }
 
 function pickContact() {
 
     function fillEmail(email) {
         document.getElementById("email").value = email;
-        checkValid();
     }
     navigator.contacts.pickContact(function(contact){
         if (contact.emails === null || contact.emails === undefined) {
@@ -92,18 +86,9 @@ function pickContact() {
                 emailList     // buttonLabels
             );
         }
-
-        checkValid();
     },function(err){
         console.log('Error: ' + err);
     });
-}
-
-function checkValid() {
-  const employeeId = document.getElementById("employeeId").value;
-  const email = document.getElementById("email").value;
-
-  document.getElementById("button").disabled = employeeId.length <=0 || email.length <= 0;
 }
 
 function checkCache() {

@@ -30,9 +30,9 @@
     <img alt="TIM Logo" src="images/tim.svg" class="tim" />
     <p class="orange">Please enter customer's email & your employee ID</p>
     <form onsubmit="redirect(); return false;">
-      <input type="text" id="email" onkeyup="checkValid()">
-      <button type="button" id="contact" onclick="pickContact();">Pick email from contacts...</button>
-      <input style="margin-top: 30px" type="text" id="employeeId" onkeyup="checkValid()">
+      <input type="text" id="email" onfocus="if (this.value==='email') this.value = ''" value="email">
+      <button type="button" id="contact" onclick="pickContact();">Pick from contacts...</button>
+      <input style="margin-top: 30px" type="text" id="employeeId">
       <input type="submit" id="button" disabled>
     </form>
     <img alt="loading" src="images/swirl.png" id="swirl" />
