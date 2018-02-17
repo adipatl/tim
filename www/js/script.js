@@ -24,7 +24,8 @@ function redirectTo(email, employeeId) {
   }
 
   if (url.length > redirectUrl.length) {
-      window.location.href = url;
+      //window.location.href = url;
+      window.open(url, '_system');
       return true;
   }
   return false;

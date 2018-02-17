@@ -8,10 +8,10 @@
     </feature>
     <name>TIM</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Trust In Mobile Application
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="adipat.larprattanakul@thomsonreuters.com" href="https://www.thomsonreuters.com">
+        Adipat Larprattanakul
     </author>
     <content src="index.html" />
     <access origin="*" />

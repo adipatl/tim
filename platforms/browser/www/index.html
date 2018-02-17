@@ -4,7 +4,10 @@
 <head>
   <title>TIM | Thomson Reuters</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
   <link href="css/style.css" rel="stylesheet">
   <script src="js/script.js"></script>
   <!-- favicons -->
@@ -34,6 +37,7 @@
     <img alt="loading" src="images/swirl.png" id="swirl" />
   </div>
 
+  <script type="text/javascript" src="cordova.js"></script>
   <script>
     checkCookie();
   </script>
