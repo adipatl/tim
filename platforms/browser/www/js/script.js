@@ -54,6 +54,23 @@ function redirectTo(email, employeeId) {
   return false;
 }
 
+function pickContact() {
+    navigator.contacts.pickContact(function(contact){
+        if (contact.emails.length === 1) {
+            document.getElementById("email").value = contact.emails[0].value;
+        }
+        else if (contact.emails.length > 1)
+            //navi
+            document.getElementById("email").value = JSON.stringify(contact.emails);
+        else
+            document.getElementById("email").value = "noemail";
+
+        checkValid();
+    },function(err){
+        console.log('Error: ' + err);
+    });
+}
+
 function checkValid() {
   const employeeId = document.getElementById("employeeId").value;
   const email = document.getElementById("email").value;

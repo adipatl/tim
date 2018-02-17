@@ -14,14 +14,14 @@ body {
 .logo {
   max-height: 80px;
   max-width: 200px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .tim {
-  max-height: 200px;
-  max-width: 200px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  max-height: 150px;
+  max-width: 150px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 form {
