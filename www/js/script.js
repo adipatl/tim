@@ -92,8 +92,11 @@ function pickContact() {
 }
 
 function checkCache() {
-  document.getElementById("employeeId").value = readFromCache("employeeId");
+  var employeeId = readFromCache("employeeId");
+  if (employeeId === null || employeeId === undefined || employeeId.length <= 0)
+      return;
 
+  document.getElementById("employeeId").value = employeeId;
 }
 
 function writeToCache(name, value) {

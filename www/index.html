@@ -32,8 +32,8 @@
     <form onsubmit="redirect(); return false;">
       <input type="text" id="email" onfocus="if (this.value==='email') this.value = ''" value="email">
       <button type="button" id="contact" onclick="pickContact();">Pick from contacts...</button>
-      <input style="margin-top: 30px" type="text" id="employeeId">
-      <input type="submit" id="button" disabled>
+      <input style="margin-top: 30px" type="text" id="employeeId" onfocus="if (this.value==='Employee ID') this.value = ''" value="Employee ID">
+      <input type="submit" id="button">
     </form>
     <img alt="loading" src="images/swirl.png" id="swirl" />
   </div>
