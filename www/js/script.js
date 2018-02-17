@@ -37,7 +37,7 @@ function redirect() {
 
   const employeeId = document.getElementById("employeeId").value;
   const email = document.getElementById("email").value;
-  getFromCache("employeeId", employeeId, 30);
+  writeToCache("employeeId", employeeId);
   var redirect = redirectTo(email, employeeId);
 }
 
@@ -111,7 +111,7 @@ function checkCache() {
 
 }
 
-function getFromCache(name, value) {
+function writeToCache(name, value) {
     var storage = window.localStorage;
     storage.setItem(name, value); // Pass a key name and its value to add or update that key.
 }
