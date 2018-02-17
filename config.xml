@@ -7,6 +7,7 @@
     <author email="adipat.larprattanakul@thomsonreuters.com" href="https://www.thomsonreuters.com">
         Adipat Larprattanakul
     </author>
+    <icon src="icon.png" />
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
