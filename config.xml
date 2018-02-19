@@ -29,7 +29,7 @@
         <splash density="port-hdpi" src="www/res/screen/android/Icon-512.png" />
         <splash density="port-xhdpi" src="www/res/screen/android/Icon-512.png" />
         <splash density="port-xxhdpi" src="www/res/screen/android/Icon-512.png" />
-        <splash density="port-xxxhdpi" src="www/res/screen/android/Icon-1024.png" />
+        <splash density="port-xxxhdpi" src="www/res/screen/android/Icon-512.png" />
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/Icon-57.png" width="57" />
