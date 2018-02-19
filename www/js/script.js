@@ -26,6 +26,10 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+
+    },
+    receivedEvent: function(id) {
         checkCache();
     }
 };
@@ -60,11 +64,12 @@ function redirectTo(email, employeeId) {
   window.open(url, '_system');
 }
 
+function fillEmail(email) {
+    document.getElementById("email").value = email;
+}
+
 function pickContact() {
 
-    function fillEmail(email) {
-        document.getElementById("email").value = email;
-    }
     navigator.contacts.pickContact(function(contact){
         if (contact.emails === null || contact.emails === undefined) {
             navigator.notification.alert('This contact has no email', fillEmail(""));

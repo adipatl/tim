@@ -1,10 +1,9 @@
 {
   "name": "com.tim.app",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "displayName": "TIM",
   "cordova": {
     "platforms": [
-      "browser",
       "android",
       "ios"
     ],
@@ -15,11 +14,10 @@
     }
   },
   "dependencies": {
-    "cordova-browser": "~5.0.3",
-    "cordova-ios": "^4.5.4",
-    "cordova-plugin-contacts": "~3.0.1",
-    "cordova-plugin-dialogs": "~2.0.1",
-    "cordova-plugin-inappbrowser": "~1.7.2",
-    "cordova-android": "~6.3.0"
+    "cordova-android": "6.3.0",
+    "cordova-ios": "4.5.4",
+    "cordova-plugin-contacts": "^3.0.1",
+    "cordova-plugin-dialogs": "^2.0.1",
+    "cordova-plugin-inappbrowser": "^1.7.2"
   }
 }
