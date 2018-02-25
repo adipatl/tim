@@ -2,7 +2,7 @@
 
 document.addEventListener('init', function(event){
 
-    const employeeCacheName = 'tim-employeeId';
+    var employeeCacheName = 'tim-employeeId';
     var writeToCache = function(name, value) {
         var storage = window.localStorage;
         storage.setItem(name, value);
