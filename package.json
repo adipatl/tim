@@ -22,11 +22,12 @@
   },
   "devDependencies": {
     "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^2.7.2"
+    "grunt-contrib-uglify": "^3.3.0"
   },
   "scripts": {
-    "build": "grunt copy && tsc"
+    "preinstall": "bower install",
+    "build": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app"
   }
 }

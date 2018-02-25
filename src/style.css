@@ -1,0 +1,24 @@
+/*.page {*/
+/*color: white;*/
+/*}*/
+
+/*.page__background {*/
+/*background-color: black;*/
+/*}*/
+
+/*.toolbar:not(.toolbar--transparent) {*/
+/*background-color: black;*/
+/*}*/
+
+/*.toolbar-button {*/
+/*color: white;*/
+/*}*/
+
+/*.list-item {*/
+/*color: white;*/
+/*}*/
+
+.submit-button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
