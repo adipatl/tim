@@ -17,6 +17,10 @@ document.addEventListener('init', function(event){
         document.querySelector('#myNavigator').pushPage(page);
     };
 
+    var resetToPage = function(page) {
+        document.querySelector('#myNavigator').resetToPage(page);
+    };
+
     var cacheEmployeeId = readFromCache(employeeCacheName);
 
     var page = event.target;
@@ -46,8 +50,27 @@ document.addEventListener('init', function(event){
             goToPage('landing.html');
         }
     }
-    else if (page.id === 'landing') {
-        console.log('landing page');
+    else {
+
+        if (page.id.startsWith('content')) {
+            var rootMenu = document.getElementById('menu');
+            var menuButton = document.getElementById('menu-button');
+            var homeMenu = document.getElementById('menu-home');
+            var resetMenu = document.getElementById('menu-reset');
+
+            menuButton.onclick = function (ev) {
+                rootMenu.open();
+            };
+
+            homeMenu.onclick = function (ev) {
+                resetToPage('login.html');
+            };
+
+            resetMenu.onclick = function (ev) {
+                writeToCache(employeeCacheName, '');
+                resetToPage('login.html');
+            }
+        }
     }
 });
 
