@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="./libs/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="./libs/onsenui/css/dark-onsen-css-components.min.css">
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="./libs/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="./libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./libs/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="./libs/onsenui/js/angular-onsenui.min.js"></script>
+
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
 </head>
 <body>
 <ons-navigator id="myNavigator" page="login.html"></ons-navigator>
@@ -54,7 +57,7 @@
     <ons-page id="landing">
 
         <ons-splitter>
-            <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse>
                 <ons-page>
                     <ons-list>
                         <ons-list-item tappable id="menu-home">Home</ons-list-item>
@@ -102,8 +105,8 @@
     </ons-page>
 </template>
 
-<template id="single-mail.html">
-    <ons-page id="content-single-mail">
+<template id="events.html">
+    <ons-page id="content-events">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
@@ -243,30 +246,10 @@
             </ons-list-item>
         </ons-list>
 
-        <!--<ons-speed-dial position="bottom right" direction="up">-->
-            <!--<ons-fab>-->
-                <!--<ons-icon icon="md-share"></ons-icon>-->
-            <!--</ons-fab>-->
-            <!--<ons-speed-dial-item>-->
-                <!--<ons-icon icon="md-twitter"></ons-icon>-->
-            <!--</ons-speed-dial-item>-->
-            <!--<ons-speed-dial-item>-->
-                <!--<ons-icon icon="md-facebook"></ons-icon>-->
-            <!--</ons-speed-dial-item>-->
-            <!--<ons-speed-dial-item>-->
-                <!--<ons-icon icon="md-google-plus"></ons-icon>-->
-            <!--</ons-speed-dial-item>-->
-        <!--</ons-speed-dial>-->
-
         <ons-fab position="bottom right">
             <ons-icon icon="md-forward"></ons-icon>
         </ons-fab>
 
-        <!--<div class="footer">-->
-            <!--<p class="event-button">-->
-                <!--<ons-button modifier="large">Submit</ons-button>-->
-            <!--</p>-->
-        <!--</div>-->
     </ons-page>
 </template>
 
@@ -293,14 +276,19 @@
                     <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
                 </div>
             </ons-list-item>
+
             <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
+                <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
+                    <ons-carousel-item>
+                        Test
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <ons-button onclick="remove()">Delete this item</ons-button>
+                    </ons-carousel-item>
+                </ons-carousel>
             </ons-list-item>
+
+
             <ons-list-item tappable>
                 <div class="left">
                     <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>
@@ -311,11 +299,9 @@
             </ons-list-item>
         </ons-list>
 
-        <div class="footer">
-            <p class="event-button">
-                <ons-button modifier="large">Submit</ons-button>
-            </p>
-        </div>
+        <ons-fab position="bottom right">
+            <ons-icon icon="md-forward"></ons-icon>
+        </ons-fab>
     </ons-page>
 </template>
 
