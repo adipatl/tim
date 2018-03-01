@@ -1,32 +1,32 @@
 "use strict";
 
 ons.bootstrap()
-    .controller('MultipleEmailController', function($scope){
+    .controller('MultipleEmailController', function(){
         console.log('multiple email controller loaded');
 
     })
-    .controller('SingleEmailController', function($scope){
+    .controller('SingleEmailController', function(){
         console.log('single email controller loaded');
 
     })
-    .controller('EmailController', function($scope) {
+    .controller('EmailController',  ['$scope', function($scope) {
         $scope.remove = function(index) {
             $scope.carousel[index].prev({animation: 'none'});
             $scope.myArray.splice(index, 1);
         };
 
-        // $scope.myArray = [
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
-        //     { name: "Adipat L", email: "adipatl.se@gmail.com" }
-        // ];
-    });
+        $scope.myArray = [
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" }
+        ];
+    }]);
 
 document.addEventListener('init', function(event){
 
