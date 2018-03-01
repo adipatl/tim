@@ -142,7 +142,7 @@
 </template>
 
 <template id="multiple-mail.html">
-    <ons-page id="content-multiple-mail">
+    <ons-page id="content-multiple-mail" ng-controller="MultipleEmailController as multipleEmailPage">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
@@ -154,87 +154,26 @@
             </div>
         </ons-toolbar>
 
-        <ons-list>
+        <ons-list ng-controller="EmailController">
             <ons-list-header>Customer e-mail address</ons-list-header>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
+            <ons-list-item ng-repeat="item in myArray track by $index">
+                <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
+                    <ons-carousel-item>
+                        <ons-row>
+                            <ons-col>
+                                <div class="list-item__title">
+                                    {{ item.name }}
+                                </div>
+                                <div class="list-item__subtitle">
+                                    {{ item.email }}
+                                </div>
+                            </ons-col>
+                        </ons-row>
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <ons-button ng-click="remove($index)">Delete this item</ons-button>
+                    </ons-carousel-item>
+                </ons-carousel>
             </ons-list-item>
             <ons-list-item tappable>
                 <div class="left">
@@ -254,7 +193,7 @@
 </template>
 
 <template id="single-mail.html">
-    <ons-page id="content-single-mail">
+    <ons-page id="content-single-mail" ng-controller="SingleEmailController as singleMailPage">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
@@ -266,29 +205,27 @@
             </div>
         </ons-toolbar>
 
-        <ons-list>
+        <ons-list ng-controller="EmailController">
             <ons-list-header>Customer e-mail address</ons-list-header>
-            <ons-list-item>
-                <div class="left">
-                    <img class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                </div>
-            </ons-list-item>
-
-            <ons-list-item>
+            <ons-list-item ng-repeat="item in myArray track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
                     <ons-carousel-item>
-                        Test
+                    <ons-row>
+                        <ons-col>
+                            <div class="list-item__title">
+                                {{ item.name }}
+                            </div>
+                            <div class="list-item__subtitle">
+                                {{ item.email }}
+                            </div>
+                        </ons-col>
+                    </ons-row>
                     </ons-carousel-item>
                     <ons-carousel-item>
-                        <ons-button onclick="remove()">Delete this item</ons-button>
+                        <ons-button ng-click="remove($index)">Delete this item</ons-button>
                     </ons-carousel-item>
                 </ons-carousel>
             </ons-list-item>
-
-
             <ons-list-item tappable>
                 <div class="left">
                     <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>

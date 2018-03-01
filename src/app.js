@@ -1,5 +1,33 @@
 "use strict";
 
+ons.bootstrap()
+    .controller('MultipleEmailController', function($scope){
+        console.log('multiple email controller loaded');
+
+    })
+    .controller('SingleEmailController', function($scope){
+        console.log('single email controller loaded');
+
+    })
+    .controller('EmailController', function($scope) {
+        $scope.remove = function(index) {
+            $scope.carousel[index].prev({animation: 'none'});
+            $scope.myArray.splice(index, 1);
+        };
+
+        // $scope.myArray = [
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" },
+        //     { name: "Adipat L", email: "adipatl.se@gmail.com" }
+        // ];
+    });
+
 document.addEventListener('init', function(event){
 
     var employeeCacheName = 'tim-employeeId';
