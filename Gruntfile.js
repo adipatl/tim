@@ -4,17 +4,22 @@ module.exports = function(grunt) {
         copy: {
             lib: {
                 files: [
-                    {expand: true, src: ['libs/**'], dest: 'www/dist/'}
+                    {expand: true, src: ['libs/**'], dest: 'www/'}
                 ]
             },
             app: {
                 files: [
-                    {expand: true, src: ['**', '!index.html', '!**/*.js'], dest: __dirname + '/www/dist', cwd: 'src'}
+                    {expand: true, src: ['**', '!index.html', '!**/*.js'], dest: __dirname + '/www', cwd: 'src'}
                 ]
             }
         },
         clean: {
-            build: ['dist', 'www/dist'],
+            build: [
+                'www/libs',
+                'www/app.js',
+                'www/index.html',
+                'www/style.css'
+            ],
             options: {
                 force: true
             }
@@ -24,7 +29,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src: ['**/*.js'],
-                    dest: __dirname + '/www/dist',
+                    dest: __dirname + '/www',
                     cwd: 'src'
                 }]
             }
@@ -41,7 +46,7 @@ module.exports = function(grunt) {
                     usePrefix: false
                 },
                 files: [
-                    {expand: true, flatten: true, src: ['src/index.html'], dest: 'www/dist'}
+                    {expand: true, flatten: true, src: ['src/index.html'], dest: 'www'}
                 ]
             }
         }
