@@ -96,22 +96,22 @@
         </ons-toolbar>
         <div style="margin: 20px auto 5px; text-align: center;">
             <p class="event-button">
-                <ons-button data-next-page="multiple-mail" modifier="large">Training Event</ons-button>
+                <ons-button data-next-page="multiple-mail" data-next-page-id="training" modifier="large">Training Event</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Meeting Event</ons-button>
+                <ons-button data-next-page="single-mail" data-next-page-id="meeting" modifier="large">Meeting Event</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Opportunity Event</ons-button>
+                <ons-button data-next-page="single-mail" data-next-page-id="opportunity" modifier="large">Opportunity Event</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Client Feedback</ons-button>
+                <ons-button data-next-page="single-mail" data-next-page-id="clientfeedback" modifier="large">Client Feedback</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Content Enhancement</ons-button>
+                <ons-button data-next-page="single-mail" data-next-page-id="contentenh" modifier="large">Content Enhancement</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Product Enhancement</ons-button>
+                <ons-button data-next-page="single-mail" data-next-page-id="productenh" modifier="large">Product Enhancement</ons-button>
             </p>
         </div>
     </ons-page>
@@ -126,7 +126,7 @@
                 </ons-toolbar-button>
             </div>
             <div class="center">
-                Multiple Mail
+                {{getTitleLabel()}}
             </div>
         </ons-toolbar>
 
@@ -177,7 +177,7 @@
                 </ons-toolbar-button>
             </div>
             <div class="center">
-                Single Mail
+                {{getTitleLabel()}}
             </div>
         </ons-toolbar>
 

@@ -18,7 +18,27 @@ ons.bootstrap()
                 scope.carousel[index].prev({animation: 'none'});
                 defaultItems.splice(index, 1);
             },
-            myArray: defaultItems
+            myArray: defaultItems,
+            getTitle: function(id) {
+                if (id === 'training') {
+                    return 'Training Event';
+                }
+                if (id === 'meeting') {
+                    return 'Meeting Event';
+                }
+                if (id === 'opportunity') {
+                    return 'Opportunity Event';
+                }
+                if (id === 'clientfeedback') {
+                    return 'Client Feedback';
+                }
+                if (id === 'contentenh') {
+                    return 'Content Enhancement';
+                }
+                if (id === 'productenh') {
+                    return 'Product Enhancement';
+                }
+             }
         }
     })
     .controller('MultipleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
@@ -37,6 +57,12 @@ ons.bootstrap()
             console.log('data: ' + JSON.stringify(content.topPage.data));
         };
 
+        $scope.getTitleLabel = function() {
+            var content = document.getElementById('content');
+            var param = content.topPage.data.content;
+            return UtilService.getTitle(param);
+        }
+
     }])
     .controller('SingleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
         $scope.remove = function(index) {
@@ -53,6 +79,12 @@ ons.bootstrap()
             var content = document.getElementById('content');
             console.log('data: ' + JSON.stringify(content.topPage.data));
         };
+
+        $scope.getTitleLabel = function() {
+            var content = document.getElementById('content');
+            var param = content.topPage.data.content;
+            return UtilService.getTitle(param);
+        }
 
     }]);
 
@@ -135,12 +167,13 @@ document.addEventListener('init', function(event){
 
         var typeSelectionHandler = function(ev) {
             var nextPage = ev.srcElement.dataset.nextPage + '.html';
+            var data = ev.srcElement.dataset.nextPageId;
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
 
             var options = {
                 data: {
-                    title: 'Another Page'
+                    content: data
                 }
             };
             content.resetToPage(nextPage, options).then(menu.close.bind(menu));
