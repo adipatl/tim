@@ -45,29 +45,32 @@ ons.bootstrap()
                 var selectedContact = {};
                 navigator.contacts.pickContact(function(contact){
                     selectedContact.name = getName(contact);
-                    if (contact.emails) {
-                        if (contact.emails.length === 1) {
-                            selectedContact.email = contact.emails[0].value;
-                            callback(selectedContact);
-                        }
-                        else if (contact.emails.length > 1) {
-                            var emailList = [];
-                            for (var i = 0; i < contact.emails.length; ++i) {
-                                emailList.push(contact.emails[i].value);
-                            }
+                    if (contact.emails === null || contact.emails === undefined || contact.emails.length <= 0) {
+                        navigator.notification.alert('This contact has no email associated');
+                        return;
+                    }
 
-                            navigator.notification.confirm(
-                                'Please select email for this customer', // message
-                                function(buttonIndex) {
-                                    if (buttonIndex && buttonIndex > 0) {
-                                        selectedContact.email = contact.emails[buttonIndex - 1].value;
-                                        callback(selectedContact);
-                                    }
-                                },            // callback to invoke with index of button pressed
-                                'Select email',           // title
-                                emailList     // buttonLabels
-                            );
+                    if (contact.emails.length === 1) {
+                        selectedContact.email = contact.emails[0].value;
+                        callback(selectedContact);
+                    }
+                    else if (contact.emails.length > 1) {
+                        var emailList = [];
+                        for (var i = 0; i < contact.emails.length; ++i) {
+                            emailList.push(contact.emails[i].value);
                         }
+
+                        navigator.notification.confirm(
+                            'Please select email for this customer', // message
+                            function(buttonIndex) {
+                                if (buttonIndex && buttonIndex > 0) {
+                                    selectedContact.email = contact.emails[buttonIndex - 1].value;
+                                    callback(selectedContact);
+                                }
+                            },            // callback to invoke with index of button pressed
+                            'Select email',           // title
+                            emailList     // buttonLabels
+                        );
                     }
 
                 },function(err){
@@ -80,29 +83,36 @@ ons.bootstrap()
         return {
             getUrl: function (id, param) {
                 var employeeId = '';
+                var contacts;
                 if (param) {
                     employeeId = param.employeeId;
+                    contacts = param.contacts;
                 }
 
+                var url = '';
                 if (id === 'training') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=t4cqtyisrcp9&q11=' + employeeId;
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=t4cqtyisrcp9&q11=' + employeeId;
                 }
-                if (id === 'meeting') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=384s5oqum0qd6&q2=' + employeeId;
+                else if (id === 'meeting') {
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=384s5oqum0qd6&q2=' + employeeId;
                 }
-                if (id === 'opportunity') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=2bsqu91m0xhbo';
+                else if (id === 'opportunity') {
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=2bsqu91m0xhbo';
                 }
-                if (id === 'clientfeedback') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=1s5p8l5gk7w22&q2=' + employeeId;
+                else if (id === 'clientfeedback') {
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=1s5p8l5gk7w22&q2=' + employeeId;
                 }
-                if (id === 'contentenh') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=1wi4x8k9kn4z2&q2=' + employeeId;
+                else if (id === 'contentenh') {
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=1wi4x8k9kn4z2&q2=' + employeeId;
                 }
-                if (id === 'productenh') {
-                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=3hh23k27tplyw&q2=' + employeeId;
+                else if (id === 'productenh') {
+                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=3hh23k27tplyw&q2=' + employeeId;
                 }
-                return '';
+
+                for (var i = 1; i < contacts.length + 1; ++i ) {
+                    url = url + '&q' + i + '=' + contacts[i-1].email;
+                }
+                return url;
             },
             getTitle: function(id) {
                 if (id === 'training') {
@@ -128,21 +138,21 @@ ons.bootstrap()
         }
     })
     .service('ContactService', ['PhoneGapService', function(PhoneGapService) {
-        var defaultItems = [];
+        var selectedContacts = [];
         return {
             add: function(scope, item) {
-                defaultItems.push(item);
+                selectedContacts.push(item);
                 scope.$apply();
             },
             remove: function(scope, index) {
                 scope.carousel[index].prev({animation: 'none'});
-                defaultItems.splice(index, 1);
+                selectedContacts.splice(index, 1);
             },
             reset: function(scope) {
-                defaultItems.length = 0;
+                selectedContacts.length = 0;
                 scope.$apply();
             },
-            selectedContacts: defaultItems,
+            selectedContacts: selectedContacts,
             pickContact: function(callback, errCallback) {
                 if (typeof callback !== 'function')
                     return;
@@ -177,7 +187,8 @@ ons.bootstrap()
             var content = document.getElementById('content');
             var url = ConfigService.getUrl(content.topPage.data.content.nextPageId,
                 {
-                    employeeId: storage.getItem('tim-employeeId')
+                    employeeId: storage.getItem('tim-employeeId'),
+                    contacts: ContactService.selectedContacts
                 });
 
             window.open(url, '_system');
