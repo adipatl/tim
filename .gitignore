@@ -69,3 +69,4 @@ libs
 
 # output
 
+!/www/dist/
