@@ -70,3 +70,4 @@ libs
 # output
 
 !/www/dist/
+!/www/dist/libs/
