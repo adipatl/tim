@@ -132,7 +132,7 @@
 
         <ons-list>
             <ons-list-header>Customer e-mail address</ons-list-header>
-            <ons-list-item ng-repeat="item in myArray track by $index">
+            <ons-list-item ng-repeat="item in selectedContacts track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
                     <ons-carousel-item>
                         <ons-row>
@@ -151,8 +151,8 @@
                     </ons-carousel-item>
                 </ons-carousel>
             </ons-list-item>
-            <ons-list-item ng-disabled="myArray.length >= maxSupportedItem"
-                           ng-style="{'color': myArray.length >= maxSupportedItem ? '#7e7e7e' : ''}"
+            <ons-list-item ng-disabled="selectedContacts.length >= maxSupportedItem"
+                           ng-style="{'color': selectedContacts.length >= maxSupportedItem ? '#7e7e7e' : ''}"
                            tappable ng-click="pickContact()">
                 <div class="left">
                     <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>

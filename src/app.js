@@ -142,7 +142,7 @@ ons.bootstrap()
                 defaultItems.length = 0;
                 scope.$apply();
             },
-            myArray: defaultItems,
+            selectedContacts: defaultItems,
             pickContact: function(callback, errCallback) {
                 if (typeof callback !== 'function')
                     return;
@@ -160,7 +160,7 @@ ons.bootstrap()
             ContactService.remove($scope, index);
         };
 
-        $scope.myArray = ContactService.myArray;
+        $scope.selectedContacts = ContactService.selectedContacts;
         $scope.maxSupportedItem = 1;
 
         $scope.pickContact = function() {
