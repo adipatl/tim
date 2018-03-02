@@ -1,24 +1,111 @@
 "use strict";
 
 ons.bootstrap()
-    .service('UtilService', function(){
-        var defaultItems = [
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" }
-        ];
+    .service('PhoneGapService', function() {
+
+        function getName(contact) {
+            if (!contact)
+                return null;
+
+            if (contact.displayName && contact.displayName.length > 0)
+                return contact.displayName;
+
+            var name = '';
+            if (contact.name) {
+                if (contact.name.givenName && contact.name.givenName.length > 0) {
+                    name += contact.name.givenName;
+                }
+
+                if (contact.name.familyName && contact.name.familyName.length > 0) {
+                    if (name.length > 0)
+                        name += ' ';
+
+                    name += contact.name.familyName;
+                }
+            }
+            return name;
+        }
+
         return {
-            remove: function(scope, index) {
-                scope.carousel[index].prev({animation: 'none'});
-                defaultItems.splice(index, 1);
+            alert: function(message) {
+                if (!navigator)
+                    return;
+
+                navigator.notification.alert(message);
             },
-            myArray: defaultItems,
+            pickContact: function(callback) {
+                if (typeof callback !== 'function')
+                    return;
+
+                if (!navigator || !navigator.contacts) {
+                    console.log('cordova is not loaded');
+                    return;
+                }
+
+                var selectedContact = {};
+                navigator.contacts.pickContact(function(contact){
+                    selectedContact.name = getName(contact);
+                    if (contact.emails) {
+                        if (contact.emails.length === 1) {
+                            selectedContact.email = contact.emails[0].value;
+                        }
+                    }
+                    // else if (contact.emails.length > 1) {
+                    //     var emailList = [];
+                    //     for (var i = 0; i < contact.emails.length; ++i) {
+                    //         emailList.push(contact.emails[i].value);
+                    //     }
+                    //
+                    //     function onSelectedEmail(buttonIndex) {
+                    //         if (buttonIndex === undefined || buttonIndex <= 0)
+                    //             fillEmail(-1);
+                    //         else
+                    //             fillEmail(emailList[buttonIndex-1]);
+                    //     }
+                    //
+                    //     navigator.notification.confirm(
+                    //         'Please select email for this customer!', // message
+                    //         onSelectedEmail,            // callback to invoke with index of button pressed
+                    //         'Select email',           // title
+                    //         emailList     // buttonLabels
+                    //     );
+                    // }
+
+                    callback(selectedContact);
+                },function(err){
+                    console.log('Error: ' + err);
+                });
+            }
+        }
+    })
+    .service('ConfigService', function(){
+        return {
+            getUrl: function (id, param) {
+                var employeeId = '';
+                if (param) {
+                    employeeId = param.employeeId;
+                }
+
+                if (id === 'training') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=t4cqtyisrcp9&q11=' + employeeId;
+                }
+                if (id === 'meeting') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=384s5oqum0qd6&q2=' + employeeId;
+                }
+                if (id === 'opportunity') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=2bsqu91m0xhbo';
+                }
+                if (id === 'clientfeedback') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=1s5p8l5gk7w22&q2=' + employeeId;
+                }
+                if (id === 'contentenh') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=1wi4x8k9kn4z2&q2=' + employeeId;
+                }
+                if (id === 'productenh') {
+                    return 'http://data-capture.financial.thomsonreuters.com/go?iv=3hh23k27tplyw&q2=' + employeeId;
+                }
+                return '';
+            },
             getTitle: function(id) {
                 if (id === 'training') {
                     return 'Training Event';
@@ -38,52 +125,85 @@ ons.bootstrap()
                 if (id === 'productenh') {
                     return 'Product Enhancement';
                 }
-             }
+                return '';
+            }
         }
     })
-    .controller('MultipleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
-        $scope.remove = function(index) {
-            UtilService.remove($scope, index);
-        };
+    .service('ContactService', ['PhoneGapService', function(PhoneGapService) {
+        var defaultItems = [];
+        return {
+            add: function(scope, item) {
+                defaultItems.push(item);
+                scope.$apply();
+            },
+            remove: function(scope, index) {
+                scope.carousel[index].prev({animation: 'none'});
+                defaultItems.splice(index, 1);
+            },
+            reset: function(scope) {
+                defaultItems.length = 0;
+                scope.$apply();
+            },
+            myArray: defaultItems,
+            pickContact: function(callback, errCallback) {
+                if (typeof callback !== 'function')
+                    return;
 
-        $scope.myArray = UtilService.myArray;
-
-        var model = this;
-
-        model.init = function (event) {
-            console.log('init - multiple mail');
-
-            var content = document.getElementById('content');
-            console.log('data: ' + JSON.stringify(content.topPage.data));
-        };
-
-        $scope.getTitleLabel = function() {
-            var content = document.getElementById('content');
-            var param = content.topPage.data.content;
-            return UtilService.getTitle(param);
+                PhoneGapService.pickContact(function(contact) {
+                    console.log(contact);
+                    callback(contact);
+                });
+            }
         }
-
     }])
-    .controller('SingleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
+    .controller('MailController', ['$scope', 'ContactService', 'ConfigService',
+    function($scope, ContactService, ConfigService) {
         $scope.remove = function(index) {
-            UtilService.remove($scope, index);
+            ContactService.remove($scope, index);
         };
 
-        $scope.myArray = UtilService.myArray;
+        $scope.myArray = ContactService.myArray;
+        $scope.maxSupportedItem = 1;
+
+        $scope.pickContact = function() {
+            ContactService.pickContact(function(contact) {
+                ContactService.add($scope, contact);
+            });
+        };
+
+        $scope.submit = function() {
+
+            var storage = window.localStorage;
+            console.log(storage.getItem('tim-employeeId'));
+
+            var content = document.getElementById('content');
+            var url = ConfigService.getUrl(content.topPage.data.content.nextPageId,
+                {
+                    employeeId: storage.getItem('tim-employeeId')
+                });
+
+            window.open(url, '_system');
+        };
 
         var model = this;
 
         model.init = function (event) {
-            console.log('init - single mail');
+            console.log('init - mail');
 
             var content = document.getElementById('content');
             console.log('data: ' + JSON.stringify(content.topPage.data));
+
+            $scope.maxSupportedItem = 1;
+            if (content.topPage.data.content.maxItem)
+                $scope.maxSupportedItem = parseInt(content.topPage.data.content.maxItem);
+
+            ContactService.reset($scope);
         };
 
         $scope.getTitleLabel = function() {
             var content = document.getElementById('content');
-            var param = content.topPage.data.content;
-            return UtilService.getTitle(param);
+            var param = content.topPage.data.content.nextPageId;
+            return ConfigService.getTitle(param);
         }
 
     }]);
@@ -123,7 +243,7 @@ document.addEventListener('init', function(event){
             loggingInElement.show();
             setTimeout(function() {
                 goToPage('landing.html');
-            }, 1000);
+            }, 100);
             return;
         }
 
@@ -167,7 +287,7 @@ document.addEventListener('init', function(event){
 
         var typeSelectionHandler = function(ev) {
             var nextPage = ev.srcElement.dataset.nextPage + '.html';
-            var data = ev.srcElement.dataset.nextPageId;
+            var data = ev.srcElement.dataset;
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
 
