@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TIM | Thomson Reuters</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta name="apple-mobile-web-app-title" content="TIM">
+    <meta name="application-name" content="TIM">
+
+    <link rel="stylesheet" href="../libs/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="../libs/onsenui/css/dark-onsen-css-components.min.css">
+
+    <script type="text/javascript" src="../libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../libs/onsenui/js/onsenui.js"></script>
+    <script type="text/javascript" src="../libs/onsenui/js/angular-onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./app.js"></script>
+</head>
+<body>
+<ons-navigator id="myNavigator" page="login.html"></ons-navigator>
+
+
+<!--  The Login Page -->
+
+<template id="login.html">
+    <ons-page id="login">
+        <ons-toolbar>
+            <div class="center" style="color: red">Login</div>
+        </ons-toolbar>
+
+        <div style="margin: 20px auto 5px; text-align: center;">Please enter your Employee ID</div>
+
+        <div style="margin: 20px auto 5px; text-align: center;">
+            <p>
+                <ons-input id="employee-id" modifier="underbar" placeholder="Employee ID" float></ons-input>
+            </p>
+            <p class="submit-button">
+                <ons-button id="next" modifier="large" disabled="true">Next</ons-button>
+            </p>
+        </div>
+        <ons-modal direction="up" id="loggingInElement">
+            <div style="text-align: center">
+                <p>
+                    <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Logging In...
+                </p>
+            </div>
+        </ons-modal>
+    </ons-page>
+</template>
+
+<template id="landing.html">
+    <ons-page id="landing">
+
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="220px" swipeable collapse>
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item>
+                            <div class="left">
+                                <img class="list-item__thumbnail" src="tim-icon.png">
+                            </div>
+                            <div class="center">
+                                TRUST in Mobile
+                            </div>
+                        </ons-list-item>
+
+                        <ons-list-item tappable id="menu-home">Home</ons-list-item>
+                        <ons-list-item tappable id="menu-reset">Reset Employee ID</ons-list-item>
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <!--<ons-splitter-content id="content" page="content-home.html"></ons-splitter-content>-->
+            <ons-splitter-content>
+                <ons-navigator id="content" page="content-home.html"></ons-navigator>
+            </ons-splitter-content>
+        </ons-splitter>
+    </ons-page>
+</template>
+
+<template id="content-home.html">
+    <ons-page id="content-home">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button>
+                    <ons-icon id="menu-button" icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                Select Event Type
+            </div>
+        </ons-toolbar>
+        <div style="margin: 20px auto 5px; text-align: center;">
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="training" data-max-item=10 modifier="large">Training Event</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="meeting" modifier="large">Meeting Event</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="opportunity" modifier="large">Opportunity Event</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="clientfeedback" modifier="large">Client Feedback</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="contentenh" modifier="large">Content Enhancement</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="productenh" modifier="large">Product Enhancement</ons-button>
+            </p>
+        </div>
+    </ons-page>
+</template>
+
+<template id="mail.html">
+    <ons-page id="content-mail" ng-controller="MailController as mailController" ons-init="mailController.init($event)">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button>
+                    <ons-icon id="menu-button" icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                {{getTitleLabel()}}
+            </div>
+        </ons-toolbar>
+
+        <ons-list>
+            <ons-list-header>Customer e-mail address</ons-list-header>
+            <ons-list-item ng-repeat="item in selectedContacts track by $index">
+                <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
+                    <ons-carousel-item>
+                        <ons-row>
+                            <ons-col>
+                                <div class="list-item__title">
+                                    {{ item.name }}
+                                </div>
+                                <div class="list-item__subtitle">
+                                    {{ item.email }}
+                                </div>
+                            </ons-col>
+                        </ons-row>
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <ons-button ng-click="remove($index)">Delete this item</ons-button>
+                    </ons-carousel-item>
+                </ons-carousel>
+            </ons-list-item>
+            <ons-list-item ng-disabled="selectedContacts.length >= maxSupportedItem"
+                           ng-style="{'color': selectedContacts.length >= maxSupportedItem ? '#7e7e7e' : ''}"
+                           tappable ng-click="pickContact()">
+                <div class="left">
+                    <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>
+                </div>
+                <div class="center">
+                    Add more email
+                </div>
+            </ons-list-item>
+        </ons-list>
+
+        <ons-fab position="bottom right" ng-click="submit()">
+            <ons-icon icon="md-forward"></ons-icon>
+        </ons-fab>
+
+    </ons-page>
+</template>
+<script type="text/javascript" src="../cordova.js"></script>
+</body>
+</html>

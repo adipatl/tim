@@ -1,0 +1,37 @@
+/*.page {*/
+/*color: white;*/
+/*}*/
+
+/*.page__background {*/
+/*background-color: black;*/
+/*}*/
+
+/*.toolbar:not(.toolbar--transparent) {*/
+/*background-color: black;*/
+/*}*/
+
+/*.toolbar-button {*/
+/*color: white;*/
+/*}*/
+
+/*.list-item {*/
+/*color: white;*/
+/*}*/
+
+.submit-button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.event-button {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

@@ -18,6 +18,18 @@
     "cordova-ios": "4.5.4",
     "cordova-plugin-contacts": "^3.0.1",
     "cordova-plugin-dialogs": "^2.0.1",
-    "cordova-plugin-inappbrowser": "^1.7.2"
+    "cordova-plugin-inappbrowser": "^1.7.2",
+    "cordova-plugin-splashscreen": "^5.0.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-replace": "^1.0.1"
+  },
+  "scripts": {
+    "preinstall": "bower install",
+    "build": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app && grunt replace:index"
   }
 }

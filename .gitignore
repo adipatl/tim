@@ -64,3 +64,10 @@ typings/
 # next.js build output
 .next
 
+# bower
+libs
+
+# output
+
+!/www/dist/
+!/www/dist/libs/
