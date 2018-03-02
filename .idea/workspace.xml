@@ -2,264 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66bee867-27f5-4653-bf0d-e0a60abfbafe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" afterPath="$PROJECT_DIR$/src/style.css" />
-      <change beforePath="$PROJECT_DIR$/www/config.xml" afterPath="$PROJECT_DIR$/www/config.xml" />
-      <change beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/app.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/LICENSE.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/angular-csp.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/angular.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/angular.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/angular.min.js.gzip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/angular.min.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/angular/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/CHANGELOG.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/gulpfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/misc/screenshot-01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/misc/screenshot-02.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/patterns.yaml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/app.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/app-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/category-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/component-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/components-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/notfound-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/pattern-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/patterns-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/platform-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/preview-component.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/components/theme-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/index.html.eco" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/select-icon.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/previewer-src/util.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/action-sheet.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/alert-dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/button-bar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/button.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/card.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/checkbox.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/combination.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/fab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/global.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/index.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/list.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/modal.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/notification.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/page.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/popover.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/progress-bar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/progress-circular.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/radio-button.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/range.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/search-input.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/segment.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/select.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/switch.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/tabbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/text-input.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/textarea.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/toast.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/toolbar-button.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/toolbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/components/util.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/dark-onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/dark-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/img/android-search-input-icon.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/img/ios-search-input-icon.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/img/select-arrow.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/action-sheet.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/combination.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/fab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/global.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/index.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/page.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/tabbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/toast.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/iphonex-support/toolbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/license.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/old-onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/old-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/src/theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/stylelint.config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css-components-src/yarn.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/dark-onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/dark-onsen-css-components.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/css/font-awesome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/font_awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/css/ionicons.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/css/ionicons.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/fonts/ionicons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/fonts/ionicons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/fonts/ionicons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/ionicons/fonts/ionicons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/css/material-design-iconic-font.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/css/material-design-iconic-font.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/old-onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/old-onsen-css-components.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsen-css-components.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsen-css-components.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsenui-core.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsenui-core.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsenui-fonts.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsenui.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/css/onsenui.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/base/base-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/base/base-checkbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/base/base-dialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/base/base-element.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/base/base-input.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-action-sheet-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-action-sheet/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-action-sheet/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-alert-dialog-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-alert-dialog/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-alert-dialog/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-back-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-bottom-toolbar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-card.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-carousel-item.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-carousel.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-checkbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-col.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-dialog/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-dialog/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-fab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-gesture-detector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-icon.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-if.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-input.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-lazy-repeat.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-list-header.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-list-item.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-list-title.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-list.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-modal/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-modal/fade-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-modal/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-modal/lift-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/ios-fade-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/ios-lift-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/ios-slide-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/ios-swipe-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/md-fade-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/md-lift-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/md-slide-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-navigator/none-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-popover/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-popover/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-progress-bar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-progress-circular.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-pull-hook.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-radio.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-range.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-ripple/animator-css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-ripple/animator-js.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-ripple/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-row.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-search-input.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-segment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-speed-dial-item.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-speed-dial.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter-content.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter-mask.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter-side.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter/overlay-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter/push-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-splitter/reveal-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-switch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-tab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-tabbar/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-template.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/ascend-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/fade-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/fall-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toast/lift-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toolbar-button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/elements/ons-toolbar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/action-sheet.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/animation-options-parser.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/animit.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/autostyle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/base-animator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/content-ready.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/doorlock.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/elements.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/gesture-detector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/animator-factory.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/device-back-button-dispatcher.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/internal.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/lazy-repeat.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/modifier-util.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/swipe-reveal.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/swiper.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/internal/toast-queue.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/iphonex-patch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/microevent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/modifier.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/notification.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/orientation.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/page-attribute-expression.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/page-loader.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/platform.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/software-keyboard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/styler.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/ons/util.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/polyfills/MutationObserver@0.7.22/MutationObserver.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/polyfills/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/polyfills/polyfill-switches.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/polyfills/setImmediate@1.0.2+mod/setImmediate.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/vendor/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/esm/vendor/viewport.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/js/angular-onsenui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/js/angular-onsenui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/js/onsenui.d.ts" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/js/onsenui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/js/onsenui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/libs/onsenui/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/dist/tim-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/www/js/script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -276,8 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+            <state relative-caret-position="182">
+              <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -286,8 +29,18 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="289">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -300,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="335">
+              <caret line="248" column="10" lean-forward="true" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -320,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+            <state relative-caret-position="182">
+              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -354,16 +107,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -376,11 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>www/</find>
-      <find>resetToPage</find>
-      <find>right</find>
-      <find>swipe</find>
-      <find>template</find>
       <find>close.</find>
       <find>EmailController</find>
       <find>splitter-con</find>
@@ -406,6 +144,11 @@
       <find>splash</find>
       <find>Icon</find>
       <find>dist</find>
+      <find>myNav</find>
+      <find>myNa</find>
+      <find>go</find>
+      <find>resetToP</find>
+      <find>naviga</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -433,7 +176,6 @@
         <option value="$PROJECT_DIR$/www/dist/app.js" />
         <option value="$PROJECT_DIR$/www/js/script.js" />
         <option value="$PROJECT_DIR$/www/dist/index.html" />
-        <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/config.xml" />
@@ -442,6 +184,7 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/www/style.css" />
         <option value="$PROJECT_DIR$/src/style.css" />
+        <option value="$PROJECT_DIR$/src/app.js" />
       </list>
     </option>
   </component>
@@ -577,7 +320,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91103000" />
+    <option name="totallyTimeSpent" value="92624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -815,14 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -835,14 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -870,14 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -886,18 +605,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+        <state relative-caret-position="289">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+        <state relative-caret-position="182">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="248" column="10" lean-forward="true" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
           <folding />
         </state>
       </provider>

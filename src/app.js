@@ -242,6 +242,18 @@ document.addEventListener('init', function(event){
 
     var cacheEmployeeId = readFromCache(employeeCacheName);
 
+    var myNavigator = document.querySelector('#myNavigator');
+    if (myNavigator && myNavigator.topPage)
+        myNavigator.topPage.onDeviceBackButton = function(event) {
+            resetToPage('login.html');
+        };
+
+    var contentNav = document.querySelector('#content');
+    if (contentNav && contentNav.topPage)
+        contentNav.topPage.onDeviceBackButton = function(event) {
+            resetToPage('login.html');
+        };
+
     var page = event.target;
     if (page.id === 'login') {
         // handle the login page
@@ -316,4 +328,3 @@ document.addEventListener('init', function(event){
         }
     }
 });
-
