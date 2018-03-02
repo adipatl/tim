@@ -1,14 +1,14 @@
 "use strict";
 
 ons.bootstrap()
-    .controller('MultipleEmailController', function(){
+    .controller('MultipleEmailController', ['$scope', function($scope) {
         console.log('multiple email controller loaded');
 
-    })
-    .controller('SingleEmailController', function(){
+    }])
+    .controller('SingleEmailController', ['$scope', function($scope) {
         console.log('single email controller loaded');
 
-    })
+    }])
     .controller('EmailController',  ['$scope', function($scope) {
         $scope.remove = function(index) {
             $scope.carousel[index].prev({animation: 'none'});
