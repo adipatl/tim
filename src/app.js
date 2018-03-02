@@ -48,30 +48,28 @@ ons.bootstrap()
                     if (contact.emails) {
                         if (contact.emails.length === 1) {
                             selectedContact.email = contact.emails[0].value;
+                            callback(selectedContact);
+                        }
+                        else if (contact.emails.length > 1) {
+                            var emailList = [];
+                            for (var i = 0; i < contact.emails.length; ++i) {
+                                emailList.push(contact.emails[i].value);
+                            }
+
+                            navigator.notification.confirm(
+                                'Please select email for this customer', // message
+                                function(buttonIndex) {
+                                    if (buttonIndex && buttonIndex > 0) {
+                                        selectedContact.email = contact.emails[buttonIndex - 1].value;
+                                        callback(selectedContact);
+                                    }
+                                },            // callback to invoke with index of button pressed
+                                'Select email',           // title
+                                emailList     // buttonLabels
+                            );
                         }
                     }
-                    // else if (contact.emails.length > 1) {
-                    //     var emailList = [];
-                    //     for (var i = 0; i < contact.emails.length; ++i) {
-                    //         emailList.push(contact.emails[i].value);
-                    //     }
-                    //
-                    //     function onSelectedEmail(buttonIndex) {
-                    //         if (buttonIndex === undefined || buttonIndex <= 0)
-                    //             fillEmail(-1);
-                    //         else
-                    //             fillEmail(emailList[buttonIndex-1]);
-                    //     }
-                    //
-                    //     navigator.notification.confirm(
-                    //         'Please select email for this customer!', // message
-                    //         onSelectedEmail,            // callback to invoke with index of button pressed
-                    //         'Select email',           // title
-                    //         emailList     // buttonLabels
-                    //     );
-                    // }
 
-                    callback(selectedContact);
                 },function(err){
                     console.log('Error: ' + err);
                 });
