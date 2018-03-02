@@ -114,42 +114,6 @@
     </ons-page>
 </template>
 
-<template id="events.html">
-    <ons-page id="content-events">
-        <ons-toolbar>
-            <div class="left">
-                <ons-toolbar-button>
-                    <ons-icon id="menu-button" icon="md-menu"></ons-icon>
-                </ons-toolbar-button>
-            </div>
-            <div class="center">
-                Single Mail
-            </div>
-        </ons-toolbar>
-        <div style="margin: 20px auto 5px; text-align: center;">
-            <p class="event-button">
-                <ons-button data-next-page="multiple-mail" modifier="large">Training Event</ons-button>
-            </p>
-            <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Meeting Event</ons-button>
-            </p>
-            <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Opportunity Event</ons-button>
-            </p>
-            <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Client Feedback</ons-button>
-            </p>
-            <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Content Enhancement</ons-button>
-            </p>
-            <p class="event-button">
-                <ons-button data-next-page="single-mail" modifier="large">Product Enhancement</ons-button>
-            </p>
-        </div>
-
-    </ons-page>
-</template>
-
 <template id="multiple-mail.html">
     <ons-page id="content-multiple-mail" ng-controller="MultipleEmailController as multipleEmailPage">
         <ons-toolbar>
@@ -163,7 +127,7 @@
             </div>
         </ons-toolbar>
 
-        <ons-list ng-controller="EmailController">
+        <ons-list>
             <ons-list-header>Customer e-mail address</ons-list-header>
             <ons-list-item ng-repeat="item in myArray track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
@@ -214,7 +178,7 @@
             </div>
         </ons-toolbar>
 
-        <ons-list ng-controller="EmailController">
+        <ons-list>
             <ons-list-header>Customer e-mail address</ons-list-header>
             <ons-list-item ng-repeat="item in myArray track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">

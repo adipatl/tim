@@ -1,12 +1,40 @@
 "use strict";
 
 ons.bootstrap()
-    .controller('MultipleEmailController', ['$scope', function($scope) {
-        console.log('multiple email controller loaded');
+    .service('UtilService', function(){
+        var defaultItems = [
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" },
+            { name: "Adipat L", email: "adipatl.se@gmail.com" }
+        ];
+        return {
+            remove: function(scope, index) {
+                scope.carousel[index].prev({animation: 'none'});
+                defaultItems.splice(index, 1);
+            },
+            myArray: defaultItems
+        }
+    })
+    .controller('MultipleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
+        $scope.remove = function(index) {
+            UtilService.remove($scope, index);
+        };
+
+        $scope.myArray = UtilService.myArray;
 
     }])
-    .controller('SingleEmailController', ['$scope', function($scope) {
-        console.log('single email controller loaded');
+    .controller('SingleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
+        $scope.remove = function(index) {
+            UtilService.remove($scope, index);
+        };
+
+        $scope.myArray = UtilService.myArray;
 
     }])
     .controller('EmailController',  ['$scope', function($scope) {
