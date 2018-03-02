@@ -28,6 +28,15 @@ ons.bootstrap()
 
         $scope.myArray = UtilService.myArray;
 
+        var model = this;
+
+        model.init = function (event) {
+            console.log('init - multiple mail');
+
+            var content = document.getElementById('content');
+            console.log('data: ' + JSON.stringify(content.topPage.data));
+        };
+
     }])
     .controller('SingleEmailController', ['$scope', 'UtilService', function($scope, UtilService) {
         $scope.remove = function(index) {
@@ -36,24 +45,15 @@ ons.bootstrap()
 
         $scope.myArray = UtilService.myArray;
 
-    }])
-    .controller('EmailController',  ['$scope', function($scope) {
-        $scope.remove = function(index) {
-            $scope.carousel[index].prev({animation: 'none'});
-            $scope.myArray.splice(index, 1);
+        var model = this;
+
+        model.init = function (event) {
+            console.log('init - single mail');
+
+            var content = document.getElementById('content');
+            console.log('data: ' + JSON.stringify(content.topPage.data));
         };
 
-        $scope.myArray = [
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" },
-            { name: "Adipat L", email: "adipatl.se@gmail.com" }
-        ];
     }]);
 
 document.addEventListener('init', function(event){
@@ -137,7 +137,13 @@ document.addEventListener('init', function(event){
             var nextPage = ev.srcElement.dataset.nextPage + '.html';
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
-            content.load(nextPage).then(menu.close.bind(menu));
+
+            var options = {
+                data: {
+                    title: 'Another Page'
+                }
+            };
+            content.resetToPage(nextPage, options).then(menu.close.bind(menu));
         };
 
         if (page.id === 'content-home') {

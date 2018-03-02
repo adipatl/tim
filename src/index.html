@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../libs/onsenui/css/dark-onsen-css-components.min.css">
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="../libs/angular/angular.min.js"></script>
-    <script type="text/javascript" src="../libs/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="../libs/onsenui/js/onsenui.js"></script>
     <script type="text/javascript" src="../libs/onsenui/js/angular-onsenui.min.js"></script>
 
     <link rel="stylesheet" href="./style.css">
@@ -74,7 +74,10 @@
                     </ons-list>
                 </ons-page>
             </ons-splitter-side>
-            <ons-splitter-content id="content" page="content-home.html"></ons-splitter-content>
+            <!--<ons-splitter-content id="content" page="content-home.html"></ons-splitter-content>-->
+            <ons-splitter-content>
+                <ons-navigator id="content" page="content-home.html"></ons-navigator>
+            </ons-splitter-content>
         </ons-splitter>
     </ons-page>
 </template>
@@ -115,7 +118,7 @@
 </template>
 
 <template id="multiple-mail.html">
-    <ons-page id="content-multiple-mail" ng-controller="MultipleEmailController as multipleEmailPage">
+    <ons-page id="content-multiple-mail" ng-controller="MultipleEmailController as multipleEmailPage" ons-init="multipleEmailPage.init($event)">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
@@ -166,7 +169,7 @@
 </template>
 
 <template id="single-mail.html">
-    <ons-page id="content-single-mail" ng-controller="SingleEmailController as singleMailPage">
+    <ons-page id="content-single-mail" ng-controller="SingleEmailController as singleMailPage" ons-init="singleMailPage.init($event)">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
