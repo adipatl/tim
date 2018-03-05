@@ -97,7 +97,7 @@ ons.bootstrap()
                     url = 'http://data-capture.financial.thomsonreuters.com/go?iv=384s5oqum0qd6&q2=' + employeeId;
                 }
                 else if (id === 'opportunity') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=2bsqu91m0xhbo';
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=2bsqu91m0xhbo&q2=' + employeeId;
                 }
                 else if (id === 'clientfeedback') {
                     url = 'http://data-capture.financial.thomsonreuters.com/go?iv=1s5p8l5gk7w22&q2=' + employeeId;
