@@ -66,6 +66,7 @@
                             </div>
                             <div class="center">
                                 TRUST in Mobile
+                                <div class="list-item__subtitle">v1.0.8</div>
                             </div>
                         </ons-list-item>
 
@@ -74,7 +75,6 @@
                     </ons-list>
                 </ons-page>
             </ons-splitter-side>
-            <!--<ons-splitter-content id="content" page="content-home.html"></ons-splitter-content>-->
             <ons-splitter-content>
                 <ons-navigator id="content" page="content-home.html"></ons-navigator>
             </ons-splitter-content>
@@ -131,7 +131,7 @@
         </ons-toolbar>
 
         <ons-list>
-            <ons-list-header>Customer e-mail address</ons-list-header>
+            <ons-list-header>{{getCustomerEmailHeader()}}</ons-list-header>
             <ons-list-item ng-repeat="item in selectedContacts track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
                     <ons-carousel-item>
@@ -151,20 +151,18 @@
                     </ons-carousel-item>
                 </ons-carousel>
             </ons-list-item>
-            <ons-list-item ng-disabled="selectedContacts.length >= maxSupportedItem"
-                           ng-style="{'color': selectedContacts.length >= maxSupportedItem ? '#7e7e7e' : ''}"
-                           tappable ng-click="pickContact()">
-                <div class="left">
-                    <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>
-                </div>
-                <div class="center">
-                    Add more email
-                </div>
-            </ons-list-item>
         </ons-list>
+        <p class="event-button">
+            <ons-button ng-disabled="selectedContacts.length >= maxSupportedItem"
+                    modifier="large" ng-click="pickContact()">{{getSelectEmailButtonLabel()}}</ons-button>
+        </p>
+
+        <ons-fab position="bottom left" ng-click="goBack()">
+            <ons-icon icon="md-arrow-back"></ons-icon>
+        </ons-fab>
 
         <ons-fab position="bottom right" ng-click="submit()">
-            <ons-icon icon="md-forward"></ons-icon>
+            <ons-icon icon="md-arrow-forward"></ons-icon>
         </ons-fab>
 
     </ons-page>
