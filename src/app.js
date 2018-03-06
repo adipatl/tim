@@ -200,6 +200,11 @@ ons.bootstrap()
             window.open(url, '_system');
         };
 
+        $scope.goBack = function() {
+
+            document.querySelector('#myNavigator').resetToPage('login.html');
+        };
+
         var model = this;
 
         model.init = function (event) {
