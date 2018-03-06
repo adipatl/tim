@@ -134,6 +134,12 @@ ons.bootstrap()
                     return 'Product Enhancement';
                 }
                 return '';
+            },
+            getLabelForCustomerEmailHeader: function(id) {
+                if (id === 'training') {
+                    return 'Customer email address (max 10)';
+                }
+                return 'Customer email address';
             }
         }
     })
@@ -213,6 +219,12 @@ ons.bootstrap()
             var content = document.getElementById('content');
             var param = content.topPage.data.content.nextPageId;
             return ConfigService.getTitle(param);
+        };
+
+        $scope.getCustomerEmailHeader = function() {
+            var content = document.getElementById('content');
+            var param = content.topPage.data.content.nextPageId;
+            return ConfigService.getLabelForCustomerEmailHeader(param);
         }
 
     }]);

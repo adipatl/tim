@@ -132,7 +132,7 @@
         </ons-toolbar>
 
         <ons-list>
-            <ons-list-header>Customer e-mail address</ons-list-header>
+            <ons-list-header>{{getCustomerEmailHeader()}}</ons-list-header>
             <ons-list-item ng-repeat="item in selectedContacts track by $index">
                 <ons-carousel swipeable auto-refresh style="height: 40px; width: 100%;" initial-index="0" auto-scroll var="carousel.{{$index}}">
                     <ons-carousel-item>
@@ -159,7 +159,7 @@
                     <ons-icon icon="md-plus" class="list-item__icon"></ons-icon>
                 </div>
                 <div class="center">
-                    Add more email
+                    Select Contact
                 </div>
             </ons-list-item>
         </ons-list>
