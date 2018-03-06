@@ -139,6 +139,10 @@ ons.bootstrap()
                 if (id === 'training') {
                     return 'Customer email address (max 10)';
                 }
+
+                if (id === 'opportunity') {
+                    return 'Valid Opportunity name';
+                }
                 return 'Customer email address';
             }
         }
