@@ -144,6 +144,12 @@ ons.bootstrap()
                     return 'Valid Opportunity name';
                 }
                 return 'Customer email address';
+            },
+            getLabelForEmailButton: function(id) {
+                if (id === 'opportunity') {
+                    return 'Select opportunity from contacts';
+                }
+                return 'Select e-mail from contacts';
             }
         }
     })
@@ -234,6 +240,12 @@ ons.bootstrap()
             var content = document.getElementById('content');
             var param = content.topPage.data.content.nextPageId;
             return ConfigService.getLabelForCustomerEmailHeader(param);
+        };
+
+        $scope.getSelectEmailButtonLabel = function() {
+            var content = document.getElementById('content');
+            var param = content.topPage.data.content.nextPageId;
+            return ConfigService.getLabelForEmailButton(param);
         }
 
     }]);
