@@ -31,7 +31,23 @@ module.exports = function(grunt) {
                     src: ['**/*.js'],
                     dest: __dirname + '/www',
                     cwd: 'src'
-                }]
+                }],
+                options: {
+                    beautify: true,
+                    mangle: false
+                }
+            },
+            release: {
+                files: [{
+                    expand: true,
+                    src: ['**/*.js'],
+                    dest: __dirname + '/www',
+                    cwd: 'src'
+                }],
+                options: {
+                    beautify: false,
+                    mangle: true
+                }
             }
         },
         replace: {

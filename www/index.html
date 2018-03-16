@@ -102,7 +102,7 @@
                 <ons-button data-next-page="mail" data-next-page-id="meeting" modifier="large">Meeting Event</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="mail" data-next-page-id="opportunity" modifier="large">Opportunity Event</ons-button>
+                <ons-button data-next-page="opportunity" data-next-page-id="opportunity" modifier="large">Opportunity Event</ons-button>
             </p>
             <p class="event-button">
                 <ons-button data-next-page="mail" data-next-page-id="clientfeedback" modifier="large">Client Feedback</ons-button>
@@ -155,6 +155,49 @@
         <p class="event-button">
             <ons-button ng-disabled="selectedContacts.length >= maxSupportedItem"
                     modifier="large" ng-click="pickContact()">{{getSelectEmailButtonLabel()}}</ons-button>
+        </p>
+        <p class="event-button">
+            <ons-button modifier="large" ng-click="submit()">Manual Entry</ons-button>
+        </p>
+
+        <ons-fab position="bottom left" ng-click="goBack()">
+            <ons-icon icon="md-arrow-back"></ons-icon>
+        </ons-fab>
+
+        <ons-fab position="bottom right" ng-click="submit()">
+            <ons-icon icon="md-arrow-forward"></ons-icon>
+        </ons-fab>
+
+    </ons-page>
+</template>
+
+<template id="opportunity.html">
+    <ons-page id="content-opportunity" ng-controller="MailController as mailController" ons-init="mailController.init($event);mailController.initOpportunity()">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button>
+                    <ons-icon id="menu-button" icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                {{getTitleLabel()}}
+            </div>
+        </ons-toolbar>
+
+        <ons-list>
+            <ons-list-header>{{getCustomerEmailHeader()}}</ons-list-header>
+            <ons-list-item ng-hide="opportunityNotes.length <= 0" tappable ng-repeat="item in opportunityNotes track by $index">
+                <label class="left">
+                    <ons-radio name="itemList" input-id="{{item.id}}" ng-model="mailController.selectedOpportunity" value="{{item.name}}"></ons-radio>
+                </label>
+                <label for="{{item.id}}" class="center">
+                    {{item.name}}
+                </label>
+            </ons-list-item>
+            <ons-list-item ng-hide="opportunityNotes.length > 0" style="color: #7e7e7e">No Opportunity in Contacts</ons-list-item>
+        </ons-list>
+        <p class="event-button">
+            <ons-button modifier="large" ng-click="submit()">Manual Entry</ons-button>
         </p>
 
         <ons-fab position="bottom left" ng-click="goBack()">

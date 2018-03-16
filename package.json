@@ -30,6 +30,11 @@
   },
   "scripts": {
     "preinstall": "bower install",
-    "build": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app && grunt replace:index"
+    "debug": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app && grunt replace:index",
+    "release": "grunt clean:build && grunt copy:lib && grunt uglify:release && grunt copy:app && grunt replace:index",
+    "debug-ios": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app && grunt replace:index && phonegap cordova --verbose run ios --target='iPhone-8-Plus, 11.2'",
+    "release-ios": "grunt clean:build && grunt copy:lib && grunt uglify:release && grunt copy:app && grunt replace:index && phonegap cordova --verbose run ios --target='iPhone-8-Plus, 11.2'",
+    "debug-android": "grunt clean:build && grunt copy:lib && grunt uglify:debug && grunt copy:app && grunt replace:index && phonegap cordova --verbose run android",
+    "release-android": "grunt clean:build && grunt copy:lib && grunt uglify:release && grunt copy:app && grunt replace:index && phonegap cordova --verbose run android"
   }
 }

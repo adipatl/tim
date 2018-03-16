@@ -1,5 +1,7 @@
 "use strict";
 
+//ons.disableAutoStyling();
+//ons.platform.select('ios');
 ons.bootstrap()
     .service('PhoneGapService', function() {
 
@@ -76,6 +78,41 @@ ons.bootstrap()
                 },function(err){
                     console.log('Error: ' + err);
                 });
+            },
+            findContact: function(keyword, callback) {
+                if (typeof callback !== 'function')
+                    return;
+
+                if (!navigator || !navigator.contacts) {
+                    console.log('cordova is not loaded');
+                    return;
+                }
+
+                var options = new ContactFindOptions();
+                options.filter = keyword;
+                options.multiple = true;
+                options.desiredFields = [navigator.contacts.fieldType.id, navigator.contacts.fieldType.name, navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.note];
+
+                var searchFields       = [navigator.contacts.fieldType.name, navigator.contacts.fieldType.displayName];
+
+                navigator.contacts.find(searchFields,
+                    function(contacts) {
+                        var contact = null;
+                        for (var i = 0; i < contacts.length; i++) {
+                            if (getName(contacts[i]) === keyword) {
+                                contact = contacts[i];
+                                break;
+                            }
+                        }
+
+                        if (contact)
+                            callback(contact);
+                    },
+                    function(error) {
+                        console.log('error -' + error);
+                    },
+                    options
+                );
             }
         }
     })
@@ -84,9 +121,11 @@ ons.bootstrap()
             getUrl: function (id, param) {
                 var employeeId = '';
                 var contacts;
+                var opportunity = '';
                 if (param) {
                     employeeId = param.employeeId;
                     contacts = param.contacts;
+                    opportunity = param.opportunity;
                 }
 
                 var url = '';
@@ -109,9 +148,15 @@ ons.bootstrap()
                     url = 'http://data-capture.financial.thomsonreuters.com/go?iv=3hh23k27tplyw&q2=' + employeeId;
                 }
 
-                for (var i = 1; i < contacts.length + 1; ++i ) {
-                    url = url + '&q' + i + '=' + contacts[i-1].email;
+                if (id === 'opportunity') {
+                    url = url + '&q1=' + opportunity;
                 }
+                else {
+                    for (var i = 1; i < contacts.length + 1; ++i ) {
+                        url = url + '&q' + i + '=' + contacts[i-1].email;
+                    }
+                }
+
                 return url;
             },
             getTitle: function(id) {
@@ -177,6 +222,18 @@ ons.bootstrap()
                     console.log(contact);
                     callback(contact);
                 });
+            },
+            getNotesFromOpportunity: function (scope, opportunityNotes) {
+                PhoneGapService.findContact('Opportunities', function(contact){
+                    var noteList = contact.note.split('\n');
+                    for (var i = 0; i < noteList.length; i++) {
+                        opportunityNotes.push({
+                            id: i+1,
+                            name: noteList[i]
+                        })
+                    }
+                    scope.$apply();
+                });
             }
         }
     }])
@@ -188,6 +245,7 @@ ons.bootstrap()
 
         $scope.selectedContacts = ContactService.selectedContacts;
         $scope.maxSupportedItem = 1;
+        this.selectedOpportunity = '';
 
         $scope.pickContact = function() {
             ContactService.pickContact(function(contact) {
@@ -204,7 +262,8 @@ ons.bootstrap()
             var url = ConfigService.getUrl(content.topPage.data.content.nextPageId,
                 {
                     employeeId: storage.getItem('tim-employeeId'),
-                    contacts: ContactService.selectedContacts
+                    contacts: ContactService.selectedContacts,
+                    opportunity: this.mailController.selectedOpportunity
                 });
 
             window.open(url, '_system');
@@ -227,7 +286,14 @@ ons.bootstrap()
             if (content.topPage.data.content.maxItem)
                 $scope.maxSupportedItem = parseInt(content.topPage.data.content.maxItem);
 
+            $scope.opportunityNotes = [];
             ContactService.reset($scope);
+        };
+
+        model.initOpportunity = function () {
+            console.log('init - Oppor');
+
+            ContactService.getNotesFromOpportunity($scope, $scope.opportunityNotes);
         };
 
         $scope.getTitleLabel = function() {
