@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66bee867-27f5-4653-bf0d-e0a60abfbafe" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
       <change beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change beforePath="$PROJECT_DIR$/www/app.js" afterPath="$PROJECT_DIR$/www/app.js" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,35 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ons-list-item#1;n#ons-list#0;n#ons-page#0;n#template#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="angular-onsenui.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/libs/onsenui/js/angular-onsenui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1689">
-              <caret line="2404" column="49" lean-forward="true" selection-start-line="2404" selection-start-column="49" selection-end-line="2404" selection-end-column="49" />
+            <state relative-caret-position="2455">
+              <caret line="2424" column="12" lean-forward="true" selection-start-line="2424" selection-start-column="12" selection-end-line="2424" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="234" column="35" lean-forward="true" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+            <state relative-caret-position="573">
+              <caret line="246" column="49" lean-forward="true" selection-start-line="246" selection-start-column="49" selection-end-line="246" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -55,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -64,8 +54,8 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="578">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -74,9 +64,23 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="17">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="197" column="19" lean-forward="true" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ons-list-item#1;n#ons-list#0;n#ons-page#0;n#template#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,9 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>myarray</find>
-      <find>selectedContacts</find>
-      <find>employeeId</find>
       <find>redirectTo</find>
       <find>myArray</find>
       <find>splash</find>
@@ -143,10 +144,13 @@
       <find>Adipat</find>
       <find>filter</find>
       <find>.push</find>
-      <find>ons.</find>
       <find>reset</find>
       <find>1.0.8</find>
+      <find>ons.</find>
+      <find>split</find>
       <find>1.0.9</find>
+      <find>nopp</find>
+      <find>oppo</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -177,12 +181,12 @@
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/style.css" />
         <option value="$PROJECT_DIR$/src/style.css" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app.js" />
       </list>
     </option>
   </component>
@@ -213,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -236,6 +239,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,12 +325,13 @@
       <workItem from="1520481910794" duration="838000" />
       <workItem from="1520997370348" duration="923000" />
       <workItem from="1521168815631" duration="424000" />
-      <workItem from="1521209075437" duration="11938000" />
+      <workItem from="1521209075437" duration="12269000" />
+      <workItem from="1521430743397" duration="2185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110764000" />
+    <option name="totallyTimeSpent" value="113280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,7 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -524,14 +528,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="158" column="8" lean-forward="false" selection-start-line="158" selection-start-column="8" selection-end-line="161" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -545,19 +541,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/splash.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/libs/onsenui/js/angular-onsenui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1689">
-          <caret line="2404" column="49" lean-forward="true" selection-start-line="2404" selection-start-column="49" selection-end-line="2404" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -568,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="578">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -577,36 +560,61 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/www/splash.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/libs/onsenui/js/angular-onsenui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="234" column="35" lean-forward="true" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+        <state relative-caret-position="2455">
+          <caret line="2424" column="12" lean-forward="true" selection-start-line="2424" selection-start-column="12" selection-end-line="2424" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="192" column="41" lean-forward="false" selection-start-line="192" selection-start-column="41" selection-end-line="192" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-carousel#0;n#ons-list-item#0;n#ons-list#0;n#ons-page#0;n#template#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-list-item#1;n#ons-list#0;n#ons-page#0;n#template#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
+        <state relative-caret-position="508">
+          <caret line="197" column="19" lean-forward="true" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-list-item#1;n#ons-list#0;n#ons-page#0;n#template#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="246" column="49" lean-forward="true" selection-start-line="246" selection-start-column="49" selection-end-line="246" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

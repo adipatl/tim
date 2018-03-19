@@ -227,9 +227,13 @@ ons.bootstrap()
                 PhoneGapService.findContact('Opportunities', function(contact){
                     var noteList = contact.note.split('\n');
                     for (var i = 0; i < noteList.length; i++) {
+                        var opportunityItem = noteList[i].trim();
+                        if (opportunityItem.length <= 0)
+                            continue;
+
                         opportunityNotes.push({
                             id: i+1,
-                            name: noteList[i]
+                            name: opportunityItem
                         })
                     }
                     scope.$apply();
