@@ -130,22 +130,19 @@ ons.bootstrap()
 
                 var url = '';
                 if (id === 'training') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=t4cqtyisrcp9&q11=' + employeeId;
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1tsttlk7owagw&q11=' + employeeId;
                 }
                 else if (id === 'meeting') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=384s5oqum0qd6&q2=' + employeeId;
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1o9a1wbal1tw8&q2=' + employeeId;
                 }
                 else if (id === 'opportunity') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=2bsqu91m0xhbo&q2=' + employeeId;
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1iunnw6rju2f3&q2=' + employeeId;
                 }
                 else if (id === 'clientfeedback') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=1s5p8l5gk7w22&q2=' + employeeId;
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=3rviu4ldv474u&q2=' + employeeId;
                 }
-                else if (id === 'contentenh') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=1wi4x8k9kn4z2&q2=' + employeeId;
-                }
-                else if (id === 'productenh') {
-                    url = 'http://data-capture.financial.thomsonreuters.com/go?iv=3hh23k27tplyw&q2=' + employeeId;
+                else if (id === 'enh') {
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=2vkpvarxuqmvk&q2=' + employeeId;
                 }
 
                 if (id === 'opportunity') {
@@ -172,11 +169,8 @@ ons.bootstrap()
                 if (id === 'clientfeedback') {
                     return 'Client Feedback';
                 }
-                if (id === 'contentenh') {
-                    return 'Content Enhancement';
-                }
-                if (id === 'productenh') {
-                    return 'Product Enhancement';
+                if (id === 'enh') {
+                    return 'Enhancement';
                 }
                 return '';
             },
