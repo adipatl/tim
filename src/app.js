@@ -144,6 +144,9 @@ ons.bootstrap()
                 else if (id === 'enh') {
                     url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=2vkpvarxuqmvk&q2=' + employeeId;
                 }
+                else if (id === 'intreview') {
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2=' + employeeId;
+                }
 
                 if (id === 'opportunity') {
                     url = url + '&q1=' + opportunity;
@@ -404,6 +407,13 @@ document.addEventListener('init', function(event){
         }
 
         var typeSelectionHandler = function(ev) {
+            if (ev.srcElement.dataset.nextPage === 'navigate') {
+                var storage = window.localStorage;
+                var url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2=' + storage.getItem('tim-employeeId')
+
+                window.open(url, '_system');
+                return;
+            }
             var nextPage = ev.srcElement.dataset.nextPage + '.html';
             var data = ev.srcElement.dataset;
             var content = document.getElementById('content');
