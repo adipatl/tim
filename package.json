@@ -1,6 +1,6 @@
 {
   "name": "com.tim.app",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "displayName": "TIM",
   "cordova": {
     "platforms": [
