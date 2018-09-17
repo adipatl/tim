@@ -136,7 +136,7 @@ ons.bootstrap()
                     url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1o9a1wbal1tw8&q2=' + employeeId;
                 }
                 else if (id === 'opportunity') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1iunnw6rju2f3&q2=' + employeeId;
+                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1iunnw6rju2f3&q3=' + employeeId;
                 }
                 else if (id === 'clientfeedback') {
                     url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=3rviu4ldv474u&q2=' + employeeId;
