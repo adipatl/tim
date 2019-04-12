@@ -155,16 +155,29 @@ ons.bootstrap()
                 }
 
                 if (id === 'opportunity') {
-                    url = url + '&q1=' + opportunity;
+                    url = url + '&q3=' + opportunity;
                 }
-                else if (id === 'pwa') {
-                    if (contacts.length > 0) {
+
+                if (contacts.length > 0) {
+                    if (id === 'training') {
+                        for (var i = 0; i < contacts.length; ++i ) {
+                            if (i == 0) {
+                                url = url + '&q3=' + contacts[0].email;
+                            }
+                            else {
+                                url = url + '&q' + (i+4) + '=' + contacts[i].email;
+                            }
+                        }
+
+                        if (contacts.length > 1) {
+                            url = url + '&q4=' + (contacts.length-1);
+                        }
+                    }
+                    else if (id === 'pwa') {
                         url = url + '&q5=' + contacts[0].email;
                     }
-                }
-                else {
-                    for (var i = 1; i < contacts.length + 1; ++i ) {
-                        url = url + '&q' + i + '=' + contacts[i-1].email;
+                    else {
+                        url = url + '&q3=' + contacts[0].email;
                     }
                 }
 
