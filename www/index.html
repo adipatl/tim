@@ -12,7 +12,7 @@
     <meta name="application-name" content="TIM">
 
     <link rel="stylesheet" href="./libs/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="./libs/onsenui/css/dark-onsen-css-components.min.css">
+    <link rel="stylesheet" href="./libs/onsenui/css/onsen-css-components.min.css">
 
     <script type="text/javascript" src="./libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="./libs/onsenui/js/onsenui.js"></script>
@@ -30,7 +30,7 @@
 <template id="login.html">
     <ons-page id="login">
         <ons-toolbar>
-            <div class="center" style="color: red">Login</div>
+            <div class="center" style="color: #001EFF">Login</div>
         </ons-toolbar>
 
         <div style="margin: 20px auto 5px; text-align: center;">Please enter your Employee ID</div>
@@ -66,7 +66,7 @@
                             </div>
                             <div class="center">
                                 TRUST in Mobile
-                                <div class="list-item__subtitle">v1.0.17</div>
+                                <div class="list-item__subtitle">v2.0.0</div>
                             </div>
                         </ons-list-item>
 
@@ -111,7 +111,13 @@
                 <ons-button data-next-page="mail" data-next-page-id="enh" modifier="large">Enhancement</ons-button>
             </p>
             <p class="event-button">
-                <ons-button data-next-page="navigate" data-next-page-id="intreview" modifier="large">Internal Case Review</ons-button>
+                <ons-button data-next-page="navigate" data-next-page-id="interview" modifier="large">Internal Case Review</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="mail" data-next-page-id="pwa" modifier="large">PWA (Voice) Eikon App Feedback</ons-button>
+            </p>
+            <p class="event-button">
+                <ons-button data-next-page="navigate" data-next-page-id="timfeedback" modifier="large">TIM Feedback</ons-button>
             </p>
         </div>
     </ons-page>

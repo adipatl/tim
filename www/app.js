@@ -1,1 +1,196 @@
-"use strict";ons.bootstrap().service("PhoneGapService",function(){function t(t){if(!t)return null;if(t.displayName&&t.displayName.length>0)return t.displayName;var e="";return t.name&&(t.name.givenName&&t.name.givenName.length>0&&(e+=t.name.givenName),t.name.familyName&&t.name.familyName.length>0&&(e.length>0&&(e+=" "),e+=t.name.familyName)),e}return{alert:function(t){navigator&&navigator.notification.alert(t)},pickContact:function(e){if("function"==typeof e)if(navigator&&navigator.contacts){var n={};navigator.contacts.pickContact(function(o){if(n.name=t(o),null===o.emails||void 0===o.emails||o.emails.length<=0)navigator.notification.alert("This contact has no email associated");else if(1===o.emails.length)n.email=o.emails[0].value,e(n);else if(o.emails.length>1){for(var a=[],i=0;i<o.emails.length;++i)a.push(o.emails[i].value);navigator.notification.confirm("Please select email for this customer",function(t){t&&t>0&&(n.email=o.emails[t-1].value,e(n))},"Select email",a)}},function(t){console.log("Error: "+t)})}else console.log("cordova is not loaded")},findContact:function(e,n){if("function"==typeof n)if(navigator&&navigator.contacts){var o=new ContactFindOptions;o.filter=e,o.multiple=!0,o.desiredFields=[navigator.contacts.fieldType.id,navigator.contacts.fieldType.name,navigator.contacts.fieldType.displayName,navigator.contacts.fieldType.note];var a=[navigator.contacts.fieldType.name,navigator.contacts.fieldType.displayName];navigator.contacts.find(a,function(o){for(var a=null,i=0;i<o.length;i++)if(t(o[i])===e){a=o[i];break}a&&n(a)},function(t){console.log("error -"+t)},o)}else console.log("cordova is not loaded")}}}).service("ConfigService",function(){return{getUrl:function(t,e){var n,o="",a="";e&&(o=e.employeeId,n=e.contacts,a=e.opportunity);var i="";if("training"===t?i="https://survey.clicktools.com/app/survey/go.jsp?iv=1tsttlk7owagw&q11="+o:"meeting"===t?i="https://survey.clicktools.com/app/survey/go.jsp?iv=1o9a1wbal1tw8&q2="+o:"opportunity"===t?i="https://survey.clicktools.com/app/survey/go.jsp?iv=1iunnw6rju2f3&q3="+o:"clientfeedback"===t?i="https://survey.clicktools.com/app/survey/go.jsp?iv=3rviu4ldv474u&q2="+o:"enh"===t?i="https://survey.clicktools.com/app/survey/go.jsp?iv=2vkpvarxuqmvk&q2="+o:"intreview"===t&&(i="https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2="+o),"opportunity"===t)i=i+"&q1="+a;else for(var c=1;c<n.length+1;++c)i=i+"&q"+c+"="+n[c-1].email;return i},getTitle:function(t){return"training"===t?"Training Event":"meeting"===t?"Meeting Event":"opportunity"===t?"Opportunity Event":"clientfeedback"===t?"Client Feedback":"enh"===t?"Enhancement":""},getLabelForCustomerEmailHeader:function(t){return"training"===t?"Customer email address (max 10)":"opportunity"===t?"Valid Opportunity name":"Customer email address"},getLabelForEmailButton:function(t){return"opportunity"===t?"Select opportunity from contacts":"Select e-mail from contacts"}}}).service("ContactService",["PhoneGapService",function(t){var e=[];return{add:function(t,n){e.push(n),t.$apply()},remove:function(t,n){t.carousel[n].prev({animation:"none"}),e.splice(n,1)},reset:function(t){e.length=0,t.$apply()},selectedContacts:e,pickContact:function(e,n){"function"==typeof e&&t.pickContact(function(t){console.log(t),e(t)})},getNotesFromOpportunity:function(e,n){t.findContact("Opportunities",function(t){for(var o=t.note.split("\n"),a=0;a<o.length;a++){var i=o[a].trim();i.length<=0||n.push({id:a+1,name:i})}e.$apply()})}}}]).controller("MailController",["$scope","ContactService","ConfigService",function(t,e,n){t.remove=function(n){e.remove(t,n)},t.selectedContacts=e.selectedContacts,t.maxSupportedItem=1,this.selectedOpportunity="",t.pickContact=function(){e.pickContact(function(n){e.add(t,n)})},t.submit=function(){var t=window.localStorage;console.log(t.getItem("tim-employeeId"));var o=document.getElementById("content"),a=n.getUrl(o.topPage.data.content.nextPageId,{employeeId:t.getItem("tim-employeeId"),contacts:e.selectedContacts,opportunity:this.mailController.selectedOpportunity});window.open(a,"_system")},t.goBack=function(){document.querySelector("#myNavigator").resetToPage("login.html")};this.init=function(n){console.log("init - mail");var o=document.getElementById("content");console.log("data: "+JSON.stringify(o.topPage.data)),t.maxSupportedItem=1,o.topPage.data.content.maxItem&&(t.maxSupportedItem=parseInt(o.topPage.data.content.maxItem)),t.opportunityNotes=[],e.reset(t)},this.initOpportunity=function(){console.log("init - Oppor"),e.getNotesFromOpportunity(t,t.opportunityNotes)},t.getTitleLabel=function(){var t=document.getElementById("content").topPage.data.content.nextPageId;return n.getTitle(t)},t.getCustomerEmailHeader=function(){var t=document.getElementById("content").topPage.data.content.nextPageId;return n.getLabelForCustomerEmailHeader(t)},t.getSelectEmailButtonLabel=function(){var t=document.getElementById("content").topPage.data.content.nextPageId;return n.getLabelForEmailButton(t)}}]),document.addEventListener("init",function(t){var e,n="tim-employeeId",o=function(t,e){window.localStorage.setItem(t,e)},a=function(t){console.log("go to "+t),document.querySelector("#myNavigator").pushPage(t)},i=function(t){console.log("reset to "+t),document.querySelector("#myNavigator").resetToPage(t)},c=(e=n,window.localStorage.getItem(e)),l=document.querySelector("#myNavigator");l&&l.topPage&&(l.topPage.onDeviceBackButton=function(t){i("login.html")});var r=document.querySelector("#content");r&&r.topPage&&(r.topPage.onDeviceBackButton=function(t){i("login.html")});var m=t.target;if("login"===m.id){var s=document.getElementById("loggingInElement");if("string"==typeof c&&c.length>0)return s.show(),void setTimeout(function(){a("landing.html")},100);var u=document.getElementById("employee-id"),g=document.getElementById("next");u.onkeyup=function(t){g.disabled=u.value.length<=0},g.onclick=function(t){o(n,u.value),s.show(),a("landing.html")}}else{if(m.id.startsWith("content")){var p=document.getElementById("menu"),d=document.getElementById("menu-button"),v=document.getElementById("menu-home"),f=document.getElementById("menu-reset");d&&(d.onclick=function(t){p.open()}),v&&(v.onclick=function(t){i("login.html")}),f&&(f.onclick=function(t){o(n,""),i("login.html")})}var y=function(t){if("navigate"!==t.srcElement.dataset.nextPage){var e=t.srcElement.dataset.nextPage+".html",n=t.srcElement.dataset,o=document.getElementById("content"),a=document.getElementById("menu"),i={data:{content:n}};o.resetToPage(e,i).then(a.close.bind(a))}else{var c="https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2="+window.localStorage.getItem("tim-employeeId");window.open(c,"_system")}};if("content-home"===m.id)for(var h=document.getElementsByTagName("ons-button"),I=0;I<h.length;I++)h[I].onclick=y}});
+"use strict";
+
+ons.bootstrap().service("PhoneGapService", function() {
+    function getName(contact) {
+        if (!contact) return null;
+        if (contact.displayName && contact.displayName.length > 0) return contact.displayName;
+        var name = "";
+        return contact.name && (contact.name.givenName && contact.name.givenName.length > 0 && (name += contact.name.givenName), 
+        contact.name.familyName && contact.name.familyName.length > 0 && (name.length > 0 && (name += " "), 
+        name += contact.name.familyName)), name;
+    }
+    return {
+        alert: function(message) {
+            navigator && navigator.notification.alert(message);
+        },
+        pickContact: function(callback) {
+            if ("function" == typeof callback) if (navigator && navigator.contacts) {
+                var selectedContact = {};
+                navigator.contacts.pickContact(function(contact) {
+                    if (selectedContact.name = getName(contact), null === contact.emails || void 0 === contact.emails || contact.emails.length <= 0) navigator.notification.alert("This contact has no email associated"); else if (1 === contact.emails.length) selectedContact.email = contact.emails[0].value, 
+                    callback(selectedContact); else if (contact.emails.length > 1) {
+                        for (var emailList = [], i = 0; i < contact.emails.length; ++i) emailList.push(contact.emails[i].value);
+                        navigator.notification.confirm("Please select email for this customer", function(buttonIndex) {
+                            buttonIndex && buttonIndex > 0 && (selectedContact.email = contact.emails[buttonIndex - 1].value, 
+                            callback(selectedContact));
+                        }, "Select email", emailList);
+                    }
+                }, function(err) {
+                    console.log("Error: " + err);
+                });
+            } else console.log("cordova is not loaded");
+        },
+        findContact: function(keyword, callback) {
+            if ("function" == typeof callback) if (navigator && navigator.contacts) {
+                var options = new ContactFindOptions();
+                options.filter = keyword, options.multiple = !0, options.desiredFields = [ navigator.contacts.fieldType.id, navigator.contacts.fieldType.name, navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.note ];
+                var searchFields = [ navigator.contacts.fieldType.name, navigator.contacts.fieldType.displayName ];
+                navigator.contacts.find(searchFields, function(contacts) {
+                    for (var contact = null, i = 0; i < contacts.length; i++) if (getName(contacts[i]) === keyword) {
+                        contact = contacts[i];
+                        break;
+                    }
+                    contact && callback(contact);
+                }, function(error) {
+                    console.log("error -" + error);
+                }, options);
+            } else console.log("cordova is not loaded");
+        }
+    };
+}).service("ConfigService", function() {
+    return {
+        getUrl: function(id, param) {
+            var contacts, employeeId = "", opportunity = "";
+            param && (employeeId = param.employeeId, contacts = param.contacts, opportunity = param.opportunity);
+            var url = "";
+            if ("training" === id ? url = "https://refinitiv.clicktools.com/go?iv=1x1ulqgrvolxi&q1=%20%0D%0A%20&q2=" + employeeId : "meeting" === id ? url = "https://refinitiv.clicktools.com/go?iv=kak1ze2kwqnx&q1=%20%0D%0A%20&q2=" + employeeId : "opportunity" === id ? url = "https://refinitiv.clicktools.com/go?iv=1402c94g3dyou&q1=%20%0D%0A%20&q2=" + employeeId : "clientfeedback" === id ? url = "https://refinitiv.clicktools.com/go?iv=1pwennwy8weqk&q1=%20%0D%0A%20&q2=" + employeeId : "enh" === id ? url = "https://refinitiv.clicktools.com/go?iv=1jbwk8odpi4xn&q1=%20%0D%0A%20&q2=" + employeeId : "interview" === id ? url = "https://refinitiv.clicktools.com/go?iv=3tg6r154u3tgn&q1=%20%0D%0A%20&q2=" + employeeId : "pwa" === id ? url = "https://refinitiv.clicktools.com/go?iv=2tbf87xllgqrf&q6=" + employeeId : "timfeedback" === id && (url = "https://refinitiv.clicktools.com/go?iv=19idrjnh2pkf6&q1=%20%0D%0A%20&q2=" + employeeId), 
+            "opportunity" === id) url = url + "&q1=" + opportunity; else if ("pwa" === id) contacts.length > 0 && (url = url + "&q5=" + contacts[0].email); else for (var i = 1; i < contacts.length + 1; ++i) url = url + "&q" + i + "=" + contacts[i - 1].email;
+            return url;
+        },
+        getTitle: function(id) {
+            return "training" === id ? "Training Event" : "meeting" === id ? "Meeting Event" : "opportunity" === id ? "Opportunity Event" : "clientfeedback" === id ? "Client Feedback" : "enh" === id ? "Enhancement" : "";
+        },
+        getLabelForCustomerEmailHeader: function(id) {
+            return "training" === id ? "Customer email address (max 10)" : "opportunity" === id ? "Valid Opportunity name" : "Customer email address";
+        },
+        getLabelForEmailButton: function(id) {
+            return "opportunity" === id ? "Select opportunity from contacts" : "Select e-mail from contacts";
+        }
+    };
+}).service("ContactService", [ "PhoneGapService", function(PhoneGapService) {
+    var selectedContacts = [];
+    return {
+        add: function(scope, item) {
+            selectedContacts.push(item), scope.$apply();
+        },
+        remove: function(scope, index) {
+            scope.carousel[index].prev({
+                animation: "none"
+            }), selectedContacts.splice(index, 1);
+        },
+        reset: function(scope) {
+            selectedContacts.length = 0, scope.$apply();
+        },
+        selectedContacts: selectedContacts,
+        pickContact: function(callback, errCallback) {
+            "function" == typeof callback && PhoneGapService.pickContact(function(contact) {
+                console.log(contact), callback(contact);
+            });
+        },
+        getNotesFromOpportunity: function(scope, opportunityNotes) {
+            PhoneGapService.findContact("Opportunities", function(contact) {
+                for (var noteList = contact.note.split("\n"), i = 0; i < noteList.length; i++) {
+                    var opportunityItem = noteList[i].trim();
+                    opportunityItem.length <= 0 || opportunityNotes.push({
+                        id: i + 1,
+                        name: opportunityItem
+                    });
+                }
+                scope.$apply();
+            });
+        }
+    };
+} ]).controller("MailController", [ "$scope", "ContactService", "ConfigService", function($scope, ContactService, ConfigService) {
+    $scope.remove = function(index) {
+        ContactService.remove($scope, index);
+    }, $scope.selectedContacts = ContactService.selectedContacts, $scope.maxSupportedItem = 1, 
+    this.selectedOpportunity = "", $scope.pickContact = function() {
+        ContactService.pickContact(function(contact) {
+            ContactService.add($scope, contact);
+        });
+    }, $scope.submit = function() {
+        var storage = window.localStorage;
+        console.log(storage.getItem("tim-employeeId"));
+        var content = document.getElementById("content"), url = ConfigService.getUrl(content.topPage.data.content.nextPageId, {
+            employeeId: storage.getItem("tim-employeeId"),
+            contacts: ContactService.selectedContacts,
+            opportunity: this.mailController.selectedOpportunity
+        });
+        window.open(url, "_system");
+    }, $scope.goBack = function() {
+        document.querySelector("#myNavigator").resetToPage("login.html");
+    };
+    this.init = function(event) {
+        console.log("init - mail");
+        var content = document.getElementById("content");
+        console.log("data: " + JSON.stringify(content.topPage.data)), $scope.maxSupportedItem = 1, 
+        content.topPage.data.content.maxItem && ($scope.maxSupportedItem = parseInt(content.topPage.data.content.maxItem)), 
+        $scope.opportunityNotes = [], ContactService.reset($scope);
+    }, this.initOpportunity = function() {
+        console.log("init - Oppor"), ContactService.getNotesFromOpportunity($scope, $scope.opportunityNotes);
+    }, $scope.getTitleLabel = function() {
+        var param = document.getElementById("content").topPage.data.content.nextPageId;
+        return ConfigService.getTitle(param);
+    }, $scope.getCustomerEmailHeader = function() {
+        var param = document.getElementById("content").topPage.data.content.nextPageId;
+        return ConfigService.getLabelForCustomerEmailHeader(param);
+    }, $scope.getSelectEmailButtonLabel = function() {
+        var param = document.getElementById("content").topPage.data.content.nextPageId;
+        return ConfigService.getLabelForEmailButton(param);
+    };
+} ]), document.addEventListener("init", function(event) {
+    var name, writeToCache = function(name, value) {
+        window.localStorage.setItem(name, value);
+    }, goToPage = function(page) {
+        console.log("go to " + page), document.querySelector("#myNavigator").pushPage(page);
+    }, resetToPage = function(page) {
+        console.log("reset to " + page), document.querySelector("#myNavigator").resetToPage(page);
+    }, cacheEmployeeId = (name = "tim-employeeId", window.localStorage.getItem(name)), myNavigator = document.querySelector("#myNavigator");
+    myNavigator && myNavigator.topPage && (myNavigator.topPage.onDeviceBackButton = function(event) {
+        resetToPage("login.html");
+    });
+    var contentNav = document.querySelector("#content");
+    contentNav && contentNav.topPage && (contentNav.topPage.onDeviceBackButton = function(event) {
+        resetToPage("login.html");
+    });
+    var page = event.target;
+    if ("login" === page.id) {
+        var loggingInElement = document.getElementById("loggingInElement");
+        if ("string" == typeof cacheEmployeeId && cacheEmployeeId.length > 0) return loggingInElement.show(), 
+        void setTimeout(function() {
+            goToPage("landing.html");
+        }, 100);
+        var employeeIdTextBox = document.getElementById("employee-id"), next = document.getElementById("next");
+        employeeIdTextBox.onkeyup = function(ev) {
+            next.disabled = employeeIdTextBox.value.length <= 0;
+        }, next.onclick = function(ev) {
+            writeToCache("tim-employeeId", employeeIdTextBox.value), loggingInElement.show(), 
+            goToPage("landing.html");
+        };
+    } else {
+        if (page.id.startsWith("content")) {
+            var rootMenu = document.getElementById("menu"), menuButton = document.getElementById("menu-button"), homeMenu = document.getElementById("menu-home"), resetMenu = document.getElementById("menu-reset");
+            menuButton && (menuButton.onclick = function(ev) {
+                rootMenu.open();
+            }), homeMenu && (homeMenu.onclick = function(ev) {
+                resetToPage("login.html");
+            }), resetMenu && (resetMenu.onclick = function(ev) {
+                writeToCache("tim-employeeId", ""), resetToPage("login.html");
+            });
+        }
+        var typeSelectionHandler = function(ev) {
+            if ("navigate" !== ev.srcElement.dataset.nextPage) {
+                var nextPage = ev.srcElement.dataset.nextPage + ".html", data = ev.srcElement.dataset, content = document.getElementById("content"), menu = document.getElementById("menu"), options = {
+                    data: {
+                        content: data
+                    }
+                };
+                content.resetToPage(nextPage, options).then(menu.close.bind(menu));
+            } else {
+                var url = "https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2=" + window.localStorage.getItem("tim-employeeId");
+                window.open(url, "_system");
+            }
+        };
+        if ("content-home" === page.id) for (var eventTypes = document.getElementsByTagName("ons-button"), i = 0; i < eventTypes.length; i++) eventTypes[i].onclick = typeSelectionHandler;
+    }
+});

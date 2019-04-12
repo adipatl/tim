@@ -130,26 +130,37 @@ ons.bootstrap()
 
                 var url = '';
                 if (id === 'training') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1tsttlk7owagw&q11=' + employeeId;
+                    url = 'https://refinitiv.clicktools.com/go?iv=1x1ulqgrvolxi&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
                 else if (id === 'meeting') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1o9a1wbal1tw8&q2=' + employeeId;
+                    url = 'https://refinitiv.clicktools.com/go?iv=kak1ze2kwqnx&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
                 else if (id === 'opportunity') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=1iunnw6rju2f3&q3=' + employeeId;
+                    url = 'https://refinitiv.clicktools.com/go?iv=1402c94g3dyou&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
                 else if (id === 'clientfeedback') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=3rviu4ldv474u&q2=' + employeeId;
+                    url = 'https://refinitiv.clicktools.com/go?iv=1pwennwy8weqk&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
                 else if (id === 'enh') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=2vkpvarxuqmvk&q2=' + employeeId;
+                    url = 'https://refinitiv.clicktools.com/go?iv=1jbwk8odpi4xn&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
-                else if (id === 'intreview') {
-                    url = 'https://survey.clicktools.com/app/survey/go.jsp?iv=323zmt2kpsnc1&q2=' + employeeId;
+                else if (id === 'interview') {
+                    url = 'https://refinitiv.clicktools.com/go?iv=3tg6r154u3tgn&q1=%20%0D%0A%20&q2=' + employeeId;
+                }
+                else if (id === 'pwa') {
+                    url = 'https://refinitiv.clicktools.com/go?iv=2tbf87xllgqrf&q6=' + employeeId;
+                }
+                else if (id === 'timfeedback') {
+                    url = 'https://refinitiv.clicktools.com/go?iv=19idrjnh2pkf6&q1=%20%0D%0A%20&q2=' + employeeId;
                 }
 
                 if (id === 'opportunity') {
                     url = url + '&q1=' + opportunity;
+                }
+                else if (id === 'pwa') {
+                    if (contacts.length > 0) {
+                        url = url + '&q5=' + contacts[0].email;
+                    }
                 }
                 else {
                     for (var i = 1; i < contacts.length + 1; ++i ) {
